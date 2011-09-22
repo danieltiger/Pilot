@@ -10,14 +10,19 @@
 
 @implementation Pilot
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
+- (id)init {
+    if (self = [super init]) {
         // Initialization code here.
     }
     
     return self;
+}
+
++ (Class)viewControllerClassForModel:(id)model {
+    NSString *modelClassName = NSStringFromClass([model class]);
+    NSString *viewControllerClassName = [NSString stringWithFormat:@"%@ViewController", modelClassName];
+    
+    return NSClassFromString(viewControllerClassName);
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Pilot : NSObject
+
++ (Class)viewControllerClassForModel:(id)model;
 
 @end
