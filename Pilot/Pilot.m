@@ -25,4 +25,15 @@
     return NSClassFromString(viewControllerClassName);
 }
 
+#pragma - Accessors
+
++ (PTApplicationDelegate *)applicationDelegate {
+    return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
++ (UINavigationController *)navigationController {
+    return self.applicationDelegate.navigationController;
+}
+
+
 @end

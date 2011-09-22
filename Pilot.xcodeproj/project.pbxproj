@@ -105,9 +105,9 @@
 			children = (
 				DB0C4742142BE08700086D0F /* Pilot.h */,
 				DB0C4743142BE08700086D0F /* Pilot.m */,
-				DB0C4740142BE08700086D0F /* Supporting Files */,
 				DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */,
 				DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */,
+				DB0C4740142BE08700086D0F /* Supporting Files */,
 			);
 			path = Pilot;
 			sourceTree = "<group>";
