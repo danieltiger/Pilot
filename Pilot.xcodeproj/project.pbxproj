@@ -10,13 +10,14 @@
 		DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
 		DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474B142BE08700086D0F /* SenTestingKit.framework */; };
-		DB0C474E142BE08700086D0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474D142BE08700086D0F /* UIKit.framework */; };
 		DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
-		DB0C4751142BE08700086D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C4750142BE08700086D0F /* CoreGraphics.framework */; };
 		DB0C4754142BE08700086D0F /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB0C4758142BE08700086D0F /* InfoPlist.strings */; };
 		DB0C475C142BE08700086D0F /* PilotTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DB0C475B142BE08700086D0F /* PilotTests.h */; };
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
+		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; };
+		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
+		DB0C4784142BF88800086D0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C4783142BF88800086D0F /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +38,13 @@
 		DB0C4743142BE08700086D0F /* Pilot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pilot.m; sourceTree = "<group>"; };
 		DB0C474A142BE08700086D0F /* PilotTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilotTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0C474B142BE08700086D0F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DB0C474D142BE08700086D0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		DB0C4750142BE08700086D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		DB0C4757142BE08700086D0F /* PilotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PilotTests-Info.plist"; sourceTree = "<group>"; };
 		DB0C4759142BE08700086D0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB0C475B142BE08700086D0F /* PilotTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilotTests.h; sourceTree = "<group>"; };
 		DB0C475D142BE08700086D0F /* PilotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PilotTests.m; sourceTree = "<group>"; };
+		DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTApplicationDelegate.h; sourceTree = "<group>"; };
+		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
+		DB0C4783142BF88800086D0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0C4784142BF88800086D0F /* UIKit.framework in Frameworks */,
 				DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,9 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */,
-				DB0C474E142BE08700086D0F /* UIKit.framework in Frameworks */,
 				DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */,
-				DB0C4751142BE08700086D0F /* CoreGraphics.framework in Frameworks */,
 				DB0C4754142BE08700086D0F /* libPilot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,8 +95,7 @@
 			children = (
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
-				DB0C474D142BE08700086D0F /* UIKit.framework */,
-				DB0C4750142BE08700086D0F /* CoreGraphics.framework */,
+				DB0C4783142BF88800086D0F /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +106,8 @@
 				DB0C4742142BE08700086D0F /* Pilot.h */,
 				DB0C4743142BE08700086D0F /* Pilot.m */,
 				DB0C4740142BE08700086D0F /* Supporting Files */,
+				DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */,
+				DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */,
 			);
 			path = Pilot;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
+				DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +432,7 @@
 				DB0C4761142BE08700086D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB0C4762142BE08700086D0F /* Build configuration list for PBXNativeTarget "PilotTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +441,7 @@
 				DB0C4764142BE08700086D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
