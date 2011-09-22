@@ -10,10 +10,8 @@
 
 @implementation Pilot
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
+- (id)init {
+    if (self = [super init]) {
         // Initialization code here.
     }
     

@@ -428,6 +428,7 @@
 				DB0C4761142BE08700086D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB0C4762142BE08700086D0F /* Build configuration list for PBXNativeTarget "PilotTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				DB0C4764142BE08700086D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
