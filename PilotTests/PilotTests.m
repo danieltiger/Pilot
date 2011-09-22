@@ -7,26 +7,45 @@
 //
 
 #import "PilotTests.h"
+#import "Pilot.h"
+
+
+@interface Post : NSObject {
+}
+@end
+
+@interface PostViewController : NSObject {
+}
+@end
+
+@implementation Post
+@end
+
+@implementation PostViewController
+@end
 
 @implementation PilotTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
     
     // Set-up code here.
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
     // Tear-down code here.
     
     [super tearDown];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in PilotTests");
+- (void)testViewControllerClassForModel {
+    Post *post = [[Post alloc] init];
+    PostViewController *postViewController = [[PostViewController alloc] init];
+    
+    STAssertEquals([Pilot viewControllerClassForModel:post], [PostViewController class], @"Test that the returned class is the same as the expected class");
+    
+    [post release];
+    [postViewController release];
 }
 
 @end
