@@ -42,4 +42,8 @@
     return [[navigationController retain] autorelease];
 }
 
++ (PTApplicationDelegate *)sharedDelegate {
+    return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 @end

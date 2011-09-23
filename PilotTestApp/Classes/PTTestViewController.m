@@ -9,7 +9,19 @@
 #import "PTTestViewController.h"
 #import "Pilot/Pilot.h"
 
+#import "RedObject.h"
+#import "GreenObject.h"
+#import "BlueObject.h"
+
 @implementation PTTestViewController
+
+@synthesize object;
+
+- (void)dealloc {
+    [object release], self.object = nil;
+    
+    [super dealloc];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,8 +32,17 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (id)initWithObjectIdentifier:(NSString *)objectIdentifier {
+    
+    if (self = [self initWithNibName:nil bundle:nil]) {
+
+    // self.object = whatever
+    
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
@@ -32,8 +53,7 @@
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
+- (void)loadView {
     [super loadView];
     
     // Title
@@ -41,6 +61,12 @@
     titleLabel.text = NSStringFromClass([self class]);
     [titleLabel sizeToFit];
     [self.view addSubview:titleLabel];
+    
+    // Message
+    UILabel *objectMessage = [[[UILabel alloc] init] autorelease];
+    objectMessage.text = self.object.message;
+    [objectMessage sizeToFit];
+    [self.view addSubview:objectMessage];
 
     // Red
     UIButton *redButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -67,8 +93,7 @@
     [self layoutViews];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -77,15 +102,18 @@
 #pragma - Target-Action
 
 - (void)redButtonAction {
-    // do some cool Pilot shit
+    RedObject *newRedObject = [RedObject objectWithMessage:@"New custom red message"];
+    [Pilot showObject:newRedObject];
 }
 
 - (void)greenButtonAction {
-    // do some cool Pilot shit
+    GreenObject *newGreenObject = [GreenObject objectWithMessage:@"New custom green message"];
+    [Pilot showObject:newGreenObject];
 }
 
 - (void)blueButtonAction {
-    // do some cool Pilot shit
+    BlueObject *newBlueObject = [BlueObject objectWithMessage:@"New custom blue message"];
+    [Pilot showObject:newBlueObject];
 }
 
 #pragma - Layout

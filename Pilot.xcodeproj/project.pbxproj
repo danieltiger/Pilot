@@ -33,6 +33,7 @@
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
 		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
 		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
+		DBC7C55C142D38AE003289ED /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
 		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
 		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
 		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
@@ -455,6 +456,7 @@
 				DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */,
 				DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */,
 				DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */,
+				DBC7C55C142D38AE003289ED /* PTObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

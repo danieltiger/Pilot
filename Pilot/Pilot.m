@@ -92,12 +92,8 @@
 
 #pragma mark - Accessors
 
-+ (PTApplicationDelegate *)applicationDelegate {
-    return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];
-}
-
 + (UINavigationController *)navigationController {
-    return self.applicationDelegate.navigationController;
+    return [PTApplicationDelegate sharedDelegate].navigationController;
 }
 
 @end

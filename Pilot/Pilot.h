@@ -61,11 +61,6 @@
 + (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal;
 
 /**
- * Returns the [[UIApplication sharedApplication] delegate]
- */
-+ (PTApplicationDelegate *)applicationDelegate;
-
-/**
  * Returns the UINavigationController instance on the applicationDelegate
  * @see applicationDelegate
  */

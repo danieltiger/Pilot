@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) NSString * message;
 
++ (id)objectWithMessage:(NSString *)message;
+
 @end
