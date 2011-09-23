@@ -10,9 +10,8 @@
 
 
 @interface PTObject : NSManagedObject {
-    NSString *identifier;
 }
 
-@property (nonatomic, retain) NSString *identifier;
+- (NSString *)identifier;
 
 @end

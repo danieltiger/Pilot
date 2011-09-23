@@ -11,4 +11,8 @@
 
 @implementation Post
 
+- (NSString *)identifier {
+    return @"PostID";
+}
+
 @end

@@ -11,6 +11,8 @@
 
 @implementation PTObject
 
-@synthesize identifier;
+- (NSString *)identifier {
+    return nil;
+}
 
 @end

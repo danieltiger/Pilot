@@ -81,10 +81,10 @@
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
              NSStringFromSelector(selector), NSStringFromClass([object class]));
     
-    NSAssert(object.identifier, @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
+    NSAssert([object respondsToSelector:@selector(identifier)], @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
              NSStringFromClass([object class]));
     
-    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.identifier] autorelease];
+    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:[object identifier]] autorelease];
     
     if (asModal) {
         [self presentViewControllerAsModal:viewController withAnimation:animation];
