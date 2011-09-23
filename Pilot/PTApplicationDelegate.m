@@ -21,6 +21,9 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
     [self.window addSubview:self.navigationController.view];
     [self.window makeKeyAndVisible];
     

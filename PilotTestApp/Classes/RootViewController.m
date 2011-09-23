@@ -1,9 +1,9 @@
 //
 //  RootViewController.m
-//  PilotTestApp
+//  Pilot
 //
 //  Created by Andrew Smith on 9/23/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Pilot. All rights reserved.
 //
 
 #import "RootViewController.h"
@@ -15,6 +15,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -31,17 +32,10 @@
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-    self.view.frame = CGRectMake(0, 0, 320, 480);
-    
-    UILabel *label = [[[UILabel alloc] init] autorelease];
-    label.text = @"RootViewController";
-    [label sizeToFit];
-    label.center = self.view.center;
-    
-    [self.view addSubview:label];
-}
+//- (void)loadView
+//{
+//    [super loadView];
+//}
 
 
 /*

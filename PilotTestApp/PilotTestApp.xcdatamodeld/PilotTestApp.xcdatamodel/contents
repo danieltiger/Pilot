@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="870" systemVersion="11B2118" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BlueObject" representedClassName="BlueObject" parentEntity="PTTestObject" syncable="YES"/>
+    <entity name="GreenObject" representedClassName="GreenObject" parentEntity="PTTestObject" syncable="YES"/>
+    <entity name="PTTestObject" representedClassName="PTTestObject" syncable="YES">
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RedObject" representedClassName="RedObject" parentEntity="PTTestObject" syncable="YES"/>
+    <elements>
+        <element name="RedObject" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="GreenObject" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="PTTestObject" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="BlueObject" positionX="160" positionY="192" width="128" height="45"/>
+    </elements>
 </model>

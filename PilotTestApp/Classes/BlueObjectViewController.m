@@ -1,14 +1,14 @@
 //
-//  RedObjectViewController.m
-//  PilotTestApp
+//  BlueObjectViewController.m
+//  Pilot
 //
 //  Created by Andrew Smith on 9/23/11.
 //  Copyright (c) 2011 Pilot. All rights reserved.
 //
 
-#import "RedObjectViewController.h"
+#import "BlueObjectViewController.h"
 
-@implementation RedObjectViewController
+@implementation BlueObjectViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,12 +29,15 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    [super loadView];
+    
+    self.view.backgroundColor = [UIColor blueColor];
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

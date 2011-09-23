@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
-		07CFECC4142D02500065A487 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; };
-		07CFECC5142D02500065A487 /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
 		DB005B9E142D0A950043E6BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB005B9F142D0A950043E6BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB005BA1142D0A950043E6BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB005BA0142D0A950043E6BD /* CoreGraphics.framework */; };
@@ -21,8 +19,8 @@
 		DB005BB1142D0A950043E6BD /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
 		DB005BB9142D0AF60043E6BD /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
-		DB065795142D0156002B2259 /* PTRootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DB065793142D0156002B2259 /* PTRootViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB065796142D0156002B2259 /* PTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB065794142D0156002B2259 /* PTRootViewController.m */; };
+		DB065795142D0156002B2259 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		DB065796142D0156002B2259 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
 		DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474B142BE08700086D0F /* SenTestingKit.framework */; };
@@ -33,6 +31,25 @@
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
 		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
+		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
+		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
+		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
+		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
+		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
+		DBD7FBAE142D15D900EC22F9 /* PTTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */; };
+		DBD7FBB1142D15D900EC22F9 /* RedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAF142D15D900EC22F9 /* RedObject.h */; };
+		DBD7FBB2142D15D900EC22F9 /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
+		DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB3142D15D900EC22F9 /* GreenObject.h */; };
+		DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB4142D15D900EC22F9 /* GreenObject.m */; };
+		DBD7FBB7142D160900EC22F9 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */; };
+		DBD7FBBC142D169A00EC22F9 /* RedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */; };
+		DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */; };
+		DBD7FBC0142D16C200EC22F9 /* BlueObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */; };
+		DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC1142D16D500EC22F9 /* GreenObjectViewController.h */; };
+		DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */; };
+		DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC5142D180300EC22F9 /* RootViewController.h */; };
+		DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC6142D180300EC22F9 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +87,8 @@
 		DB005BA7142D0A950043E6BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB005BA9142D0A950043E6BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB005BAB142D0A950043E6BD /* PilotTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilotTestApp-Prefix.pch"; sourceTree = "<group>"; };
-		DB005BAC142D0A950043E6BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DB005BAD142D0A950043E6BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB005BAC142D0A950043E6BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		DB005BAD142D0A950043E6BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		DB005BB0142D0A950043E6BD /* PilotTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PilotTestApp.xcdatamodel; sourceTree = "<group>"; };
 		DB06573F142C49C3002B2259 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB0C473A142BE08700086D0F /* libPilot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPilot.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +104,24 @@
 		DB0C475D142BE08700086D0F /* PilotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PilotTests.m; sourceTree = "<group>"; };
 		DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTApplicationDelegate.h; sourceTree = "<group>"; };
 		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
+		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
+		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
+		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
+		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
+		DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestObject.h; path = Classes/PTTestObject.h; sourceTree = "<group>"; };
+		DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestObject.m; path = Classes/PTTestObject.m; sourceTree = "<group>"; };
+		DBD7FBAF142D15D900EC22F9 /* RedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedObject.h; path = Classes/RedObject.h; sourceTree = "<group>"; };
+		DBD7FBB0142D15D900EC22F9 /* RedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedObject.m; path = Classes/RedObject.m; sourceTree = "<group>"; };
+		DBD7FBB3142D15D900EC22F9 /* GreenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreenObject.h; path = Classes/GreenObject.h; sourceTree = "<group>"; };
+		DBD7FBB4142D15D900EC22F9 /* GreenObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GreenObject.m; path = Classes/GreenObject.m; sourceTree = "<group>"; };
+		DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedObjectViewController.h; path = Classes/RedObjectViewController.h; sourceTree = "<group>"; };
+		DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedObjectViewController.m; path = Classes/RedObjectViewController.m; sourceTree = "<group>"; };
+		DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObjectViewController.h; path = Classes/BlueObjectViewController.h; sourceTree = "<group>"; };
+		DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObjectViewController.m; path = Classes/BlueObjectViewController.m; sourceTree = "<group>"; };
+		DBD7FBC1142D16D500EC22F9 /* GreenObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreenObjectViewController.h; path = Classes/GreenObjectViewController.h; sourceTree = "<group>"; };
+		DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GreenObjectViewController.m; path = Classes/GreenObjectViewController.m; sourceTree = "<group>"; };
+		DBD7FBC5142D180300EC22F9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
+		DBD7FBC6142D180300EC22F9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +163,7 @@
 		DB005BA3142D0A950043E6BD /* PilotTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				DB005BAC142D0A950043E6BD /* AppDelegate.h */,
-				DB005BAD142D0A950043E6BD /* AppDelegate.m */,
+				DBD7FBB8142D166C00EC22F9 /* Classes */,
 				DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */,
 				DB005BA4142D0A950043E6BD /* Supporting Files */,
 			);
@@ -222,6 +256,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DBD7FBB8142D166C00EC22F9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DB005BAC142D0A950043E6BD /* AppDelegate.h */,
+				DB005BAD142D0A950043E6BD /* AppDelegate.m */,
+				DBD7FBB3142D15D900EC22F9 /* GreenObject.h */,
+				DBD7FBB4142D15D900EC22F9 /* GreenObject.m */,
+				DBD7FBAF142D15D900EC22F9 /* RedObject.h */,
+				DBD7FBB0142D15D900EC22F9 /* RedObject.m */,
+				DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */,
+				DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */,
+				DBD7FBA6142D15D800EC22F9 /* BlueObject.h */,
+				DBD7FBA7142D15D800EC22F9 /* BlueObject.m */,
+				DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */,
+				DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */,
+				DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */,
+				DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */,
+				DBD7FBC1142D16D500EC22F9 /* GreenObjectViewController.h */,
+				DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */,
+				DBD7FBC5142D180300EC22F9 /* RootViewController.h */,
+				DBD7FBC6142D180300EC22F9 /* RootViewController.m */,
+				DBC7C516142D2515003289ED /* PTTestViewController.h */,
+				DBC7C517142D2515003289ED /* PTTestViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,7 +292,17 @@
 			files = (
 				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
 				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
-				DB065795142D0156002B2259 /* PTRootViewController.h in Headers */,
+				DB065795142D0156002B2259 /* (null) in Headers */,
+				DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */,
+				DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */,
+				DBD7FBB1142D15D900EC22F9 /* RedObject.h in Headers */,
+				DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */,
+				DBD7FBB7142D160900EC22F9 /* PTObject.h in Headers */,
+				DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */,
+				DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */,
+				DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */,
+				DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */,
+				DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +445,16 @@
 			files = (
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
 				DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */,
-				DB065796142D0156002B2259 /* PTRootViewController.m in Sources */,
+				DB065796142D0156002B2259 /* (null) in Sources */,
+				DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */,
+				DBD7FBAE142D15D900EC22F9 /* PTTestObject.m in Sources */,
+				DBD7FBB2142D15D900EC22F9 /* RedObject.m in Sources */,
+				DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */,
+				DBD7FBBC142D169A00EC22F9 /* RedObjectViewController.m in Sources */,
+				DBD7FBC0142D16C200EC22F9 /* BlueObjectViewController.m in Sources */,
+				DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */,
+				DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */,
+				DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +560,7 @@
 		DB0C4734142BE04D00086D0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = Pilot;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -487,6 +568,7 @@
 		DB0C4735142BE04D00086D0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = Pilot;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -615,6 +697,7 @@
 				DB005BB4142D0A950043E6BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB0C4732142BE04D00086D0F /* Build configuration list for PBXProject "Pilot" */ = {
 			isa = XCConfigurationList;
