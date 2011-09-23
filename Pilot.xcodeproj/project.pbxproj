@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
 		DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474B142BE08700086D0F /* SenTestingKit.framework */; };
@@ -15,12 +16,19 @@
 		DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB0C4758142BE08700086D0F /* InfoPlist.strings */; };
 		DB0C475C142BE08700086D0F /* PilotTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DB0C475B142BE08700086D0F /* PilotTests.h */; };
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
-		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; };
+		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
 		DB0C4784142BF88800086D0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C4783142BF88800086D0F /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		072D6F8A142C08FF0027CDB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 072D6F6B142C08FE0027CDB6;
+			remoteInfo = PilotTestApp;
+		};
 		DB0C4752142BE08700086D0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB0C472F142BE04D00086D0F /* Project object */;
@@ -31,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PilotTestApp.xcodeproj; path = PilotTestApp/PilotTestApp.xcodeproj; sourceTree = "<group>"; };
 		DB0C473A142BE08700086D0F /* libPilot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPilot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0C473D142BE08700086D0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB0C4741142BE08700086D0F /* Pilot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pilot-Prefix.pch"; sourceTree = "<group>"; };
@@ -70,9 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072D6F87142C08FE0027CDB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				072D6F8B142C08FF0027CDB6 /* PilotTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DB0C472D142BE04D00086D0F = {
 			isa = PBXGroup;
 			children = (
+				072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */,
 				DB0C473F142BE08700086D0F /* Pilot */,
 				DB0C4755142BE08700086D0F /* PilotTests */,
 				DB0C473C142BE08700086D0F /* Frameworks */,
@@ -93,6 +112,7 @@
 		DB0C473C142BE08700086D0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */,
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
 				DB0C4783142BF88800086D0F /* UIKit.framework */,
@@ -154,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
+				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +222,9 @@
 /* Begin PBXProject section */
 		DB0C472F142BE04D00086D0F /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = DB0C4732142BE04D00086D0F /* Build configuration list for PBXProject "Pilot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -211,6 +235,12 @@
 			mainGroup = DB0C472D142BE04D00086D0F;
 			productRefGroup = DB0C473B142BE08700086D0F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 072D6F87142C08FE0027CDB6 /* Products */;
+					ProjectRef = 072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DB0C4739142BE08700086D0F /* Pilot */,
@@ -218,6 +248,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		072D6F8B142C08FF0027CDB6 /* PilotTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PilotTestApp.app;
+			remoteRef = 072D6F8A142C08FF0027CDB6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DB0C4747142BE08700086D0F /* Resources */ = {
@@ -290,12 +330,14 @@
 		DB0C4734142BE04D00086D0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		DB0C4735142BE04D00086D0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -316,7 +358,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -340,7 +382,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pilot/Pilot-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -375,7 +417,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -400,7 +442,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pilot/Pilot-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
