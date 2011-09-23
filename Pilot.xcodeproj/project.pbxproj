@@ -34,8 +34,6 @@
 		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
 		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
 		DBC7C55C142D38AE003289ED /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
-		DBC7C56D142D3C4A003289ED /* TestPilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C56B142D3C4A003289ED /* TestPilot.h */; };
-		DBC7C56E142D3C4A003289ED /* TestPilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C56C142D3C4A003289ED /* TestPilot.m */; };
 		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
 		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
 		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
@@ -109,8 +107,6 @@
 		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
 		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
 		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
-		DBC7C56B142D3C4A003289ED /* TestPilot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestPilot.h; path = Classes/TestPilot.h; sourceTree = "<group>"; };
-		DBC7C56C142D3C4A003289ED /* TestPilot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPilot.m; path = Classes/TestPilot.m; sourceTree = "<group>"; };
 		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
 		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
 		DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestObject.h; path = Classes/PTTestObject.h; sourceTree = "<group>"; };
@@ -284,8 +280,6 @@
 				DBD7FBC6142D180300EC22F9 /* RootViewController.m */,
 				DBC7C516142D2515003289ED /* PTTestViewController.h */,
 				DBC7C517142D2515003289ED /* PTTestViewController.m */,
-				DBC7C56B142D3C4A003289ED /* TestPilot.h */,
-				DBC7C56C142D3C4A003289ED /* TestPilot.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -310,7 +304,6 @@
 				DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */,
 				DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */,
 				DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */,
-				DBC7C56D142D3C4A003289ED /* TestPilot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +457,6 @@
 				DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */,
 				DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */,
 				DBC7C55C142D38AE003289ED /* PTObject.m in Sources */,
-				DBC7C56E142D3C4A003289ED /* TestPilot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +531,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -561,6 +554,7 @@
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

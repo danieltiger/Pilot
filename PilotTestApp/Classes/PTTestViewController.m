@@ -7,7 +7,7 @@
 //
 
 #import "PTTestViewController.h"
-#import "TestPilot.h"
+#import "Pilot.h"
 
 #import "RedObject.h"
 #import "GreenObject.h"
@@ -103,17 +103,17 @@
 
 - (void)redButtonAction {
     RedObject *newRedObject = [RedObject objectWithMessage:@"New custom red message"];
-    [TestPilot showObject:newRedObject];
+    [Pilot showObject:newRedObject];
 }
 
 - (void)greenButtonAction {
     GreenObject *newGreenObject = [GreenObject objectWithMessage:@"New custom green message"];
-    [TestPilot showObject:newGreenObject];
+    [Pilot showObject:newGreenObject];
 }
 
 - (void)blueButtonAction {
     BlueObject *newBlueObject = [BlueObject objectWithMessage:@"New custom blue message"];
-    [TestPilot showObject:newBlueObject];
+    [Pilot showObject:newBlueObject];
 }
 
 #pragma - Layout
