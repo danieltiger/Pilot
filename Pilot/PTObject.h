@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 
 
 @interface PTObject : NSManagedObject {

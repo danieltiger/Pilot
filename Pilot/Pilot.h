@@ -18,7 +18,7 @@
 /**
  *
  */
-+ (void)showObject:(PTObject *)model withSelector:(SEL)selector animation:(UIViewAnimationTransition)transition;
++ (void)showObject:(PTObject *)model withSelector:(SEL)selector animation:(UIViewAnimationTransition)transition asModal:(BOOL)asModal;
 
 /**
  * Returns the [[UIApplication sharedApplication] delegate]
