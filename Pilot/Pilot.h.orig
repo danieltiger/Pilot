@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+<<<<<<< HEAD
+=======
 
+#import "PTRootViewController.h"
+>>>>>>> Added some test VCs to the test app, created PTRootViewController
 #import "PTApplicationDelegate.h"
 #import "PTObject.h"
 
@@ -19,6 +23,19 @@
  *
  */
 + (void)showObject:(PTObject *)model withSelector:(SEL)selector animation:(UIViewAnimationTransition)transition;
+
+/**
+ * Returns a UIViewController for the class name
+ */
++ (UIViewController *)viewControllerForClassName:(NSString *)name;
+
+/**
+ * Returns the name of the UIViewController sublcass to be used as the 
+ * root view controller when building the UINavigationController
+ */
++ (NSString *)rootViewControllerClassName;
+
++ (UIViewController *)rootViewController;
 
 /**
  * Returns the [[UIApplication sharedApplication] delegate]

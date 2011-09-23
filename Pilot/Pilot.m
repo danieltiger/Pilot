@@ -3,7 +3,7 @@
 //  Pilot
 //
 //  Created by Andrew Smith on 9/22/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pilot. All rights reserved.
 //
 
 #import "Pilot.h"
@@ -26,15 +26,6 @@
 
 #pragma mark - Public API
 
-+ (UIViewController *)viewControllerForClassName:(NSString *)name {
-    Class vcClass = NSClassFromString(name);
-    
-    NSAssert(vcClass, @"PILOT ERROR: Could not find ViewController class named %@", name);
-    
-    UIViewController *vc = [[[vcClass alloc] init] autorelease];
-    return vc;
-}
-
 + (void)showObject:(PTObject *)model withSelector:(SEL)selector animation:(UIViewAnimationTransition)transition {
     Class viewControllerClass = [self viewControllerClassForModel:model];
     
@@ -43,14 +34,6 @@
 }
 
 #pragma mark - Accessors
-
-+ (UIViewController *)rootViewController {
-    return [self viewControllerForClassName:[self rootViewControllerClassName]];
-}
-
-+ (NSString *)rootViewControllerClassName {
-    return @"RootViewController";
-}
 
 + (PTApplicationDelegate *)applicationDelegate {
     return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];

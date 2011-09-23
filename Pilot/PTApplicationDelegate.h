@@ -3,7 +3,7 @@
 //  Pilot
 //
 //  Created by Andrew Smith on 9/22/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pilot. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,6 +14,15 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+/**
+ * The UINavigationControllers RootViewController
+ */
+@property (nonatomic, readonly) UIViewController *rootViewController;
+
+/**
+ * The apps navigation controller.
+ */
 @property (nonatomic, readonly) UINavigationController *navigationController;
 
 @end

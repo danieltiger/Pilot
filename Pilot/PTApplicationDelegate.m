@@ -3,7 +3,7 @@
 //  Pilot
 //
 //  Created by Andrew Smith on 9/22/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pilot. All rights reserved.
 //
 
 #import "PTApplicationDelegate.h"
@@ -29,9 +29,13 @@
 
 #pragma - Accessors
 
+- (UIViewController *)rootViewController {
+    return [[[UIViewController alloc] init] autorelease];
+}
+
 - (UINavigationController *)navigationController {
     if (navigationController) return [[navigationController retain] autorelease];
-    navigationController = [[UINavigationController alloc] initWithRootViewController:[Pilot rootViewController]];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:[self rootViewController]];
     return [[navigationController retain] autorelease];
 }
 

@@ -3,7 +3,7 @@
 //  PilotTests
 //
 //  Created by Andrew Smith on 9/22/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Pilot. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
