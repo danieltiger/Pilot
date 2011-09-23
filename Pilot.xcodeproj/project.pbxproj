@@ -40,6 +40,7 @@
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
 		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
 		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
+		DBC7C55C142D38AE003289ED /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
 		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
 		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
 		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
@@ -318,6 +319,7 @@
 				07CFECEE142D2FF30065A487 /* Post.h in Headers */,
 				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
 				07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */,
+				DBC7C56D142D3C4A003289ED /* TestPilot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +475,7 @@
 				07CFECEF142D2FF30065A487 /* Post.m in Sources */,
 				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,
 				07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */,
+				DBC7C56E142D3C4A003289ED /* TestPilot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +550,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -569,6 +573,7 @@
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

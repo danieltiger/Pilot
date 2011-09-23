@@ -25,7 +25,7 @@
     NSString *viewControllerClassName = [NSString stringWithFormat:@"%@ViewController", objectClassName];
 
     NSAssert(NSClassFromString(viewControllerClassName), @"PILOT ERROR: Could not find %@", viewControllerClassName);
-    
+        
     return NSClassFromString(viewControllerClassName);
 }
 
@@ -77,9 +77,6 @@
 
 + (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
     Class viewControllerClass = [self viewControllerClassForObject:object];
-
-    NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
-             NSStringFromSelector(selector), NSStringFromClass([object class]));
     
     NSAssert([object respondsToSelector:@selector(identifier)], @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
              NSStringFromClass([object class]));
@@ -95,12 +92,8 @@
 
 #pragma mark - Accessors
 
-+ (PTApplicationDelegate *)applicationDelegate {
-    return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];
-}
-
 + (UINavigationController *)navigationController {
-    return self.applicationDelegate.navigationController;
+    return [PTApplicationDelegate sharedDelegate].navigationController;
 }
 
 @end

@@ -25,4 +25,9 @@
  */
 @property (nonatomic, readonly) UINavigationController *navigationController;
 
+/**
+ * Returns the shared application delegate
+ */
++ (PTApplicationDelegate *)sharedDelegate;
+
 @end

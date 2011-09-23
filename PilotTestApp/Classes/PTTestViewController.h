@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTTestObject.h"
 
-@interface PTTestViewController : UIViewController
+@interface PTTestViewController : UIViewController {
+@private
+    PTTestObject *object;
+}
+
+@property (nonatomic, retain) PTTestObject *object;
+
+- (id)initWithObjectIdentifier:(NSString *)objectIdentifier;
 
 /**
  * Convenience function to automatically layout buttons and titles
