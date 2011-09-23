@@ -79,7 +79,7 @@
     Class viewControllerClass = [self viewControllerClassForObject:object];
 
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector: %@ for %@ViewController", 
-             NSStringFromSelector(selector), NSStringFromClass([object class])]);
+             NSStringFromSelector(selector), NSStringFromClass([object class]));
     
     id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.identifier] autorelease];
     
