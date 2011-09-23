@@ -32,7 +32,24 @@
     [[self navigationController] pushViewController:viewController animated:YES];
 }
 
++ (UIViewController *)viewControllerForClassName:(NSString *)name {
+    Class vcClass = NSClassFromString(name);
+    
+    NSAssert(vcClass, @"PILOT ERROR:  Could not find ViewController class named %@", name);
+    
+    UIViewController *vc = [[[vcClass alloc] init] autorelease];
+    return vc;
+}
+
 #pragma - Accessors
+
++ (UIViewController *)rootViewController {
+    return [self viewControllerForClassName:[self rootViewControllerClassName]];
+}
+
++ (NSString *)rootViewControllerClassName {
+    return @"RootViewController";
+}
 
 + (PTApplicationDelegate *)applicationDelegate {
     return (PTApplicationDelegate *)[[UIApplication sharedApplication] delegate];

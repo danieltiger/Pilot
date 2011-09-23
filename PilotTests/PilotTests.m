@@ -48,4 +48,12 @@
     [postViewController release];
 }
 
+- (void)testViewControllerForNameThatExists {
+    STAssertNotNil([Pilot viewControllerForClassName:@"PostViewController"], @"Pilot should find view controller that exists");
+}
+
+- (void)testViewControllerForNameThatDoesntExist {
+    STAssertThrows([Pilot viewControllerForClassName:@"FooViewController"], @"Pilot should not find view controller that doesn't exist");
+}
+
 @end

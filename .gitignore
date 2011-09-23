@@ -20,4 +20,5 @@ ReadlrCore/Mogenerator/*
 *.pbxuser
 *.xcworkspace
 *.xcshareddata
+*.xcuserstate
 xcuserdata

@@ -7,6 +7,7 @@
 //
 
 #import "PTApplicationDelegate.h"
+#import "Pilot.h"
 
 @implementation PTApplicationDelegate
 
@@ -30,14 +31,8 @@
 
 - (UINavigationController *)navigationController {
     if (navigationController) return [[navigationController retain] autorelease];
-    navigationController = [[UINavigationController alloc] initWithRootViewController:[self rootViewController]];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:[Pilot rootViewController]];
     return [[navigationController retain] autorelease];
-}
-
-- (UIViewController *)rootViewController {
-    Class rootVCClass = NSClassFromString(@"RootViewController");
-    UIViewController *rootVC = [[[rootVCClass alloc] init] autorelease];
-    return rootVC;
 }
 
 @end

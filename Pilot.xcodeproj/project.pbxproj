@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
 		DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474B142BE08700086D0F /* SenTestingKit.framework */; };
@@ -18,7 +19,6 @@
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
 		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
-		DB0C4784142BF88800086D0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C4783142BF88800086D0F /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,7 @@
 /* Begin PBXFileReference section */
 		072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PilotTestApp.xcodeproj; path = PilotTestApp/PilotTestApp.xcodeproj; sourceTree = "<group>"; };
+		DB06573F142C49C3002B2259 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB0C473A142BE08700086D0F /* libPilot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPilot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0C473D142BE08700086D0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB0C4741142BE08700086D0F /* Pilot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pilot-Prefix.pch"; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		DB0C475D142BE08700086D0F /* PilotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PilotTests.m; sourceTree = "<group>"; };
 		DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTApplicationDelegate.h; sourceTree = "<group>"; };
 		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
-		DB0C4783142BF88800086D0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB0C4784142BF88800086D0F /* UIKit.framework in Frameworks */,
 				DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */,
 				DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */,
 				DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */,
 				DB0C4754142BE08700086D0F /* libPilot.a in Frameworks */,
@@ -91,12 +91,11 @@
 		DB0C472D142BE04D00086D0F = {
 			isa = PBXGroup;
 			children = (
-				072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */,
 				DB0C473F142BE08700086D0F /* Pilot */,
 				DB0C4755142BE08700086D0F /* PilotTests */,
 				DB0C473C142BE08700086D0F /* Frameworks */,
 				DB0C473B142BE08700086D0F /* Products */,
-				DB0C4765142BE0A500086D0F /* Vendors */,
+				072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +114,7 @@
 				072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */,
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
-				DB0C4783142BF88800086D0F /* UIKit.framework */,
+				DB06573F142C49C3002B2259 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,13 +156,6 @@
 				DB0C4758142BE08700086D0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DB0C4765142BE0A500086D0F /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

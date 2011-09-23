@@ -27,7 +27,7 @@
 		072D6F7D142C08FE0027CDB6 /* PilotTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilotTestApp-Prefix.pch"; sourceTree = "<group>"; };
 		072D6F7E142C08FE0027CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		072D6F7F142C08FE0027CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		072D6F8C142C096A0027CDB6 /* libPilot.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPilot.a; path = "../build/Release-iphoneos/libPilot.a"; sourceTree = "<group>"; };
+		072D6F8C142C096A0027CDB6 /* libPilot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPilot.a; path = "../build/Release-iphoneos/libPilot.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +226,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PilotTestApp/PilotTestApp-Prefix.pch";
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/Pilot";
 				WRAPPER_EXTENSION = app;
@@ -239,6 +240,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PilotTestApp/PilotTestApp-Prefix.pch";
 				INFOPLIST_FILE = "PilotTestApp/PilotTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/Pilot";
 				WRAPPER_EXTENSION = app;
@@ -264,6 +266,7 @@
 				072D6F85142C08FE0027CDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
