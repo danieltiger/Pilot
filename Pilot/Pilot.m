@@ -23,8 +23,8 @@
 + (Class)viewControllerClassForObject:(PTObject *)object {
     NSString *objectClassName = NSStringFromClass([object class]);
     NSString *viewControllerClassName = [NSString stringWithFormat:@"%@ViewController", objectClassName];
-    
-    NSAssert(NSClassFromString(viewControllerClassName), @"PILOT ERROR: Could not find %@ViewController", objectClassName);
+
+    NSAssert(NSClassFromString(viewControllerClassName), @"PILOT ERROR: Could not find %@", viewControllerClassName);
     
     return NSClassFromString(viewControllerClassName);
 }
@@ -78,8 +78,11 @@
 + (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
     Class viewControllerClass = [self viewControllerClassForObject:object];
 
-    NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector: %@ for %@ViewController", 
+    NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
              NSStringFromSelector(selector), NSStringFromClass([object class]));
+    
+    NSAssert(object.identifier, @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
+             NSStringFromClass([object class]));
     
     id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.identifier] autorelease];
     

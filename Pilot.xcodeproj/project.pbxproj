@@ -9,9 +9,17 @@
 /* Begin PBXBuildFile section */
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
+		07CFECEA142D2F890065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
+		07CFECEE142D2FF30065A487 /* Post.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECEC142D2FF30065A487 /* Post.h */; };
+		07CFECEF142D2FF30065A487 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECED142D2FF30065A487 /* Post.m */; };
+		07CFECF0142D30450065A487 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07CFECF2142D30A40065A487 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */; };
+		07CFECF4142D31620065A487 /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
+		07CFECF5142D32A60065A487 /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
+		07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECF6142D33CE0065A487 /* PostViewController.h */; };
+		07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECF7142D33CF0065A487 /* PostViewController.m */; };
 		DB005B9E142D0A950043E6BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB005B9F142D0A950043E6BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
-		DB005BA1142D0A950043E6BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB005BA0142D0A950043E6BD /* CoreGraphics.framework */; };
 		DB005BA2142D0A950043E6BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
 		DB005BA8142D0A950043E6BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB005BA6142D0A950043E6BD /* InfoPlist.strings */; };
 		DB005BAA142D0A950043E6BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB005BA9142D0A950043E6BD /* main.m */; };
@@ -25,7 +33,6 @@
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
 		DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C474B142BE08700086D0F /* SenTestingKit.framework */; };
 		DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
-		DB0C4754142BE08700086D0F /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB0C4758142BE08700086D0F /* InfoPlist.strings */; };
 		DB0C475C142BE08700086D0F /* PilotTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DB0C475B142BE08700086D0F /* PilotTests.h */; };
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
@@ -41,7 +48,6 @@
 		DBD7FBB2142D15D900EC22F9 /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
 		DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB3142D15D900EC22F9 /* GreenObject.h */; };
 		DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB4142D15D900EC22F9 /* GreenObject.m */; };
-		DBD7FBB7142D160900EC22F9 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */; };
 		DBD7FBBC142D169A00EC22F9 /* RedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */; };
 		DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */; };
@@ -81,8 +87,11 @@
 		07CFECC0142D02360065A487 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		07CFECC2142D02500065A487 /* PTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTObject.h; sourceTree = "<group>"; };
 		07CFECC3142D02500065A487 /* PTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTObject.m; sourceTree = "<group>"; };
+		07CFECEC142D2FF30065A487 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		07CFECED142D2FF30065A487 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		07CFECF6142D33CE0065A487 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		07CFECF7142D33CF0065A487 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		DB005B9C142D0A950043E6BD /* PilotTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilotTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB005BA0142D0A950043E6BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DB005BA5142D0A950043E6BD /* PilotTestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PilotTestApp-Info.plist"; sourceTree = "<group>"; };
 		DB005BA7142D0A950043E6BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB005BA9142D0A950043E6BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,7 +141,6 @@
 				DB005BB9142D0AF60043E6BD /* libPilot.a in Frameworks */,
 				DB005B9E142D0A950043E6BD /* UIKit.framework in Frameworks */,
 				DB005B9F142D0A950043E6BD /* Foundation.framework in Frameworks */,
-				DB005BA1142D0A950043E6BD /* CoreGraphics.framework in Frameworks */,
 				DB005BA2142D0A950043E6BD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,10 +158,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */,
-				DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */,
+				07CFECF4142D31620065A487 /* libPilot.a in Frameworks */,
+				07CFECEA142D2F890065A487 /* CoreData.framework in Frameworks */,
+				07CFECF2142D30A40065A487 /* CoreFoundation.framework in Frameworks */,
 				DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */,
-				DB0C4754142BE08700086D0F /* libPilot.a in Frameworks */,
+				DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */,
+				DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +220,6 @@
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
 				DB06573F142C49C3002B2259 /* UIKit.framework */,
-				DB005BA0142D0A950043E6BD /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,6 +249,10 @@
 		DB0C4755142BE08700086D0F /* PilotTests */ = {
 			isa = PBXGroup;
 			children = (
+				07CFECEC142D2FF30065A487 /* Post.h */,
+				07CFECED142D2FF30065A487 /* Post.m */,
+				07CFECF6142D33CE0065A487 /* PostViewController.h */,
+				07CFECF7142D33CF0065A487 /* PostViewController.m */,
 				DB0C475B142BE08700086D0F /* PilotTests.h */,
 				DB0C475D142BE08700086D0F /* PilotTests.m */,
 				DB0C4756142BE08700086D0F /* Supporting Files */,
@@ -297,12 +310,14 @@
 				DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */,
 				DBD7FBB1142D15D900EC22F9 /* RedObject.h in Headers */,
 				DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */,
-				DBD7FBB7142D160900EC22F9 /* PTObject.h in Headers */,
 				DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */,
 				DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */,
 				DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */,
 				DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */,
 				DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */,
+				07CFECEE142D2FF30065A487 /* Post.h in Headers */,
+				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
+				07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +470,9 @@
 				DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */,
 				DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */,
 				DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */,
+				07CFECEF142D2FF30065A487 /* Post.m in Sources */,
+				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,
+				07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +675,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -682,6 +701,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
 			};

@@ -8,21 +8,9 @@
 
 #import "PilotTests.h"
 #import "Pilot.h"
+#import "Post.h"
+#import "PostViewController.h"
 
-
-@interface Post : NSObject {
-}
-@end
-
-@interface PostViewController : NSObject {
-}
-@end
-
-@implementation Post
-@end
-
-@implementation PostViewController
-@end
 
 @implementation PilotTests
 
@@ -36,6 +24,12 @@
     // Tear-down code here.
     
     [super tearDown];
+}
+
+- (void)testShowObject {
+    Post *post = [[[Post alloc] init] autorelease];
+
+    [Pilot showObject:post];
 }
 
 @end
