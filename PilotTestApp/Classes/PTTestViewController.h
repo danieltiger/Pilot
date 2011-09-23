@@ -16,6 +16,8 @@
 
 @property (nonatomic, retain) PTTestObject *object;
 
+- (id)initWithObjectIdentifier:(NSString *)objectIdentifier;
+
 /**
  * Convenience function to automatically layout buttons and titles
  */
