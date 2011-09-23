@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
+		07CFECC4142D02500065A487 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; };
+		07CFECC5142D02500065A487 /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
 		DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB0C4744142BE08700086D0F /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C4743142BE08700086D0F /* Pilot.m */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		072D6F86142C08FE0027CDB6 /* PilotTestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PilotTestApp.xcodeproj; path = PilotTestApp/PilotTestApp.xcodeproj; sourceTree = "<group>"; };
+		07CFECC0142D02360065A487 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07CFECC2142D02500065A487 /* PTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTObject.h; sourceTree = "<group>"; };
+		07CFECC3142D02500065A487 /* PTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTObject.m; sourceTree = "<group>"; };
 		DB06573F142C49C3002B2259 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB0C473A142BE08700086D0F /* libPilot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPilot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0C473D142BE08700086D0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */,
 				DB0C473E142BE08700086D0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +118,7 @@
 		DB0C473C142BE08700086D0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07CFECC0142D02360065A487 /* CoreData.framework */,
 				072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */,
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
@@ -126,6 +134,8 @@
 				DB0C4743142BE08700086D0F /* Pilot.m */,
 				DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */,
 				DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */,
+				07CFECC2142D02500065A487 /* PTObject.h */,
+				07CFECC3142D02500065A487 /* PTObject.m */,
 				DB0C4740142BE08700086D0F /* Supporting Files */,
 			);
 			path = Pilot;
@@ -167,6 +177,7 @@
 			files = (
 				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
 				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
+				07CFECC4142D02500065A487 /* PTObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +297,7 @@
 			files = (
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
 				DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */,
+				07CFECC5142D02500065A487 /* PTObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "PTApplicationDelegate.h"
+#import "PTObject.h"
 
 
 @interface Pilot : NSObject
 
-+ (Class)viewControllerClassForModel:(id)model;
+/**
+ *
+ */
++ (void)showObject:(PTObject *)model withSelector:(SEL)selector animation:(UIViewAnimationTransition)transition;
 
 /**
  * Returns a UIViewController for the class name
