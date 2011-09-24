@@ -49,6 +49,12 @@
 		DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5DB142D6A86003289ED /* AppDelegate.m */; };
 		DBC7C5DF142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5DD142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld */; };
 		DBC7C5E7142D6AA2003289ED /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
+		DBC7C61D142D6D0B003289ED /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C615142D6D0B003289ED /* first.png */; };
+		DBC7C61E142D6D0B003289ED /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C616142D6D0B003289ED /* first@2x.png */; };
+		DBC7C61F142D6D0B003289ED /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C618142D6D0B003289ED /* FirstViewController.m */; };
+		DBC7C620142D6D0B003289ED /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C619142D6D0B003289ED /* second.png */; };
+		DBC7C621142D6D0B003289ED /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C61A142D6D0B003289ED /* second@2x.png */; };
+		DBC7C622142D6D0B003289ED /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C61C142D6D0B003289ED /* SecondViewController.m */; };
 		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
 		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
 		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
@@ -147,6 +153,14 @@
 		DBC7C5DA142D6A86003289ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		DBC7C5DB142D6A86003289ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		DBC7C5DE142D6A86003289ED /* PilotTabbarTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PilotTabbarTestApp.xcdatamodel; sourceTree = "<group>"; };
+		DBC7C615142D6D0B003289ED /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Classes/first.png; sourceTree = "<group>"; };
+		DBC7C616142D6D0B003289ED /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Classes/first@2x.png"; sourceTree = "<group>"; };
+		DBC7C617142D6D0B003289ED /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Classes/FirstViewController.h; sourceTree = "<group>"; };
+		DBC7C618142D6D0B003289ED /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Classes/FirstViewController.m; sourceTree = "<group>"; };
+		DBC7C619142D6D0B003289ED /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Classes/second.png; sourceTree = "<group>"; };
+		DBC7C61A142D6D0B003289ED /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Classes/second@2x.png"; sourceTree = "<group>"; };
+		DBC7C61B142D6D0B003289ED /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Classes/SecondViewController.h; sourceTree = "<group>"; };
+		DBC7C61C142D6D0B003289ED /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Classes/SecondViewController.m; sourceTree = "<group>"; };
 		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
 		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
 		DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestObject.h; path = Classes/PTTestObject.h; sourceTree = "<group>"; };
@@ -319,8 +333,7 @@
 		DBC7C5D1142D6A86003289ED /* PilotTabbarTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				DBC7C5DA142D6A86003289ED /* AppDelegate.h */,
-				DBC7C5DB142D6A86003289ED /* AppDelegate.m */,
+				DBC7C614142D6CF2003289ED /* Classes */,
 				DBC7C5DD142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld */,
 				DBC7C5D2142D6A86003289ED /* Supporting Files */,
 			);
@@ -336,6 +349,23 @@
 				DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC7C614142D6CF2003289ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C5DA142D6A86003289ED /* AppDelegate.h */,
+				DBC7C5DB142D6A86003289ED /* AppDelegate.m */,
+				DBC7C615142D6D0B003289ED /* first.png */,
+				DBC7C616142D6D0B003289ED /* first@2x.png */,
+				DBC7C617142D6D0B003289ED /* FirstViewController.h */,
+				DBC7C618142D6D0B003289ED /* FirstViewController.m */,
+				DBC7C619142D6D0B003289ED /* second.png */,
+				DBC7C61A142D6D0B003289ED /* second@2x.png */,
+				DBC7C61B142D6D0B003289ED /* SecondViewController.h */,
+				DBC7C61C142D6D0B003289ED /* SecondViewController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		DBD7FBB8142D166C00EC22F9 /* Classes */ = {
@@ -519,6 +549,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC7C5D6142D6A86003289ED /* InfoPlist.strings in Resources */,
+				DBC7C61D142D6D0B003289ED /* first.png in Resources */,
+				DBC7C61E142D6D0B003289ED /* first@2x.png in Resources */,
+				DBC7C620142D6D0B003289ED /* second.png in Resources */,
+				DBC7C621142D6D0B003289ED /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +622,8 @@
 				DBC7C5D8142D6A86003289ED /* main.m in Sources */,
 				DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */,
 				DBC7C5DF142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld in Sources */,
+				DBC7C61F142D6D0B003289ED /* FirstViewController.m in Sources */,
+				DBC7C622142D6D0B003289ED /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
