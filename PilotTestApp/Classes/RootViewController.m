@@ -14,8 +14,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -38,13 +36,14 @@
 //}
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
 }
-*/
 
 - (void)viewDidUnload
 {

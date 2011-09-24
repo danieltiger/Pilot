@@ -11,10 +11,10 @@
 
 @interface PTTestViewController : UIViewController {
 @private
-    PTTestObject *object;
+    NSString *objectMessage;
 }
 
-@property (nonatomic, retain) PTTestObject *object;
+@property (nonatomic, copy) NSString *objectMessage;
 
 - (id)initWithObjectIdentifier:(NSString *)objectIdentifier;
 

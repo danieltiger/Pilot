@@ -15,10 +15,10 @@
 
 @implementation PTTestViewController
 
-@synthesize object;
+@synthesize objectMessage;
 
 - (void)dealloc {
-    [object release], self.object = nil;
+    [objectMessage release];
     
     [super dealloc];
 }
@@ -35,9 +35,7 @@
 - (id)initWithObjectIdentifier:(NSString *)objectIdentifier {
     
     if (self = [self initWithNibName:nil bundle:nil]) {
-
-    // self.object = whatever
-    
+        self.objectMessage = objectIdentifier;
     }
     return self;
 }
@@ -51,23 +49,26 @@
 
 #pragma mark - View lifecycle
 
-
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-    [super loadView];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     // Title
     UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    titleLabel.text = NSStringFromClass([self class]);
+    NSInteger index = [[[Pilot navigationController] viewControllers] count];    
+    titleLabel.text = [NSString stringWithFormat:@"%@ #%d", NSStringFromClass([self class]), index];
     [titleLabel sizeToFit];
     [self.view addSubview:titleLabel];
     
     // Message
-    UILabel *objectMessage = [[[UILabel alloc] init] autorelease];
-    objectMessage.text = self.object.message;
-    [objectMessage sizeToFit];
-    [self.view addSubview:objectMessage];
-
+    UILabel *objectMessageLabel = [[[UILabel alloc] init] autorelease];
+    objectMessageLabel.numberOfLines = 0;
+    objectMessageLabel.text = self.objectMessage;
+    
+    CGSize size = [self.objectMessage sizeWithFont:[objectMessageLabel font] 
+                            constrainedToSize:CGSizeMake(300, MAXFLOAT) lineBreakMode:UILineBreakModeTailTruncation];
+    objectMessageLabel.frame = CGRectMake(0, 0, size.width, size.height);  
+    [self.view addSubview:objectMessageLabel];
+    
     // Red
     UIButton *redButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [redButton setTitle:@"Show Red" forState:UIControlStateNormal];
@@ -91,6 +92,8 @@
     
     // This is just a convience function to layout the title and buttons
     [self layoutViews];
+
+    
 }
 
 - (void)viewDidUnload {
@@ -102,17 +105,17 @@
 #pragma - Target-Action
 
 - (void)redButtonAction {
-    RedObject *newRedObject = [RedObject objectWithMessage:@"New custom red message"];
+    RedObject *newRedObject = [RedObject objectWithUniqueMessage];
     [Pilot showObject:newRedObject];
 }
 
 - (void)greenButtonAction {
-    GreenObject *newGreenObject = [GreenObject objectWithMessage:@"New custom green message"];
+    GreenObject *newGreenObject = [GreenObject objectWithUniqueMessage];
     [Pilot showObject:newGreenObject];
 }
 
 - (void)blueButtonAction {
-    BlueObject *newBlueObject = [BlueObject objectWithMessage:@"New custom blue message"];
+    BlueObject *newBlueObject = [BlueObject objectWithUniqueMessage];
     [Pilot showObject:newBlueObject];
 }
 
@@ -132,7 +135,7 @@
             UIView *v0 = [self.view.subviews objectAtIndex:(i - 1)];
             
             v.frame = CGRectMake(round(self.view.frame.size.width / 2 - v.frame.size.width / 2), 
-                                 round(v0.frame.origin.y + v.frame.size.height + 20), 
+                                 round(v0.frame.origin.y + v0.frame.size.height + 20), 
                                  v.frame.size.width, 
                                  v.frame.size.height);
         }

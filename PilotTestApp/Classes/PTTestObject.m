@@ -13,7 +13,9 @@
 
 @dynamic message;
 
-+ (id)objectWithMessage:(NSString *)message {
+#pragma mark - Factory
+
++ (id)objectWithUniqueMessage {
     
     NSString *objectEntityName = NSStringFromClass([self class]);
     
@@ -24,10 +26,16 @@
     
     // Set message and save.  Saving in factory methods is not normally a good idea, performance wise,
     // but it will do for tests
-    [object setMessage:message];
+    [object setMessage:[NSString stringWithFormat:@"Unique %@ Object: %@", NSStringFromClass(self), [object objectID]]];
     [object.managedObjectContext save:NULL];
     
     return object;
+}
+
+#pragma mark - Pilot
+
+- (NSString *)identifier {
+    return self.message;
 }
 
 @end

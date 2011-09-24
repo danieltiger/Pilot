@@ -137,6 +137,13 @@
         return __persistentStoreCoordinator;
     }
     
+    // nuke old store
+    NSURL *oldStoreURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PilotTestApp.sqlite"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (oldStoreURL) {
+        [fileManager removeItemAtURL:oldStoreURL error:NULL];
+    }
+    
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PilotTestApp.sqlite"];
     
     NSError *error = nil;
