@@ -18,6 +18,16 @@
 /**
  *
  */
++ (void)initWithNavigationController:(UINavigationController *)navigationController;
+
+/**
+ *
+ */
++ (void)initWithTabBarController:(UITabBarController *)tabBarController;
+
+/**
+ *
+ */
 + (void)showObject:(PTObject *)object;
 
 /**
@@ -59,11 +69,5 @@
  *
  */
 + (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal;
-
-/**
- * Returns the UINavigationController instance on the applicationDelegate
- * @see applicationDelegate
- */
-+ (UINavigationController *)navigationController;
 
 @end

@@ -14,7 +14,11 @@
 + (SEL)defaultInitializer;
 + (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation;
 + (void)presentViewControllerAsModal:(id)viewController withAnimation:(UIViewAnimationTransition)animation;
++ (UINavigationController *)currentNavigationController;
 @end
+
+static UINavigationController *rootNavigationController = nil;
+static UITabBarController *rootTabBarController = nil;
 
 @implementation Pilot
 
@@ -34,14 +38,36 @@
 }
 
 + (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation {
-    [[self navigationController] pushViewController:viewController animated:YES];
+    [[self currentNavigationController] pushViewController:viewController animated:YES];
 }
 
 + (void)presentViewControllerAsModal:(id)viewController withAnimation:(UIViewAnimationTransition)animation {
-    [[self navigationController] presentModalViewController:viewController animated:YES];
+    [[self currentNavigationController] presentModalViewController:viewController animated:YES];
+}
+
++ (UINavigationController *)currentNavigationController {
+    if (rootNavigationController) {
+        return rootNavigationController;
+    } else {
+        UIViewController *navigationController = rootTabBarController.selectedViewController;
+
+        if ([navigationController isKindOfClass:[UINavigationController class]]) {
+            return (UINavigationController *)navigationController;
+        }
+    }
+    
+    return nil;
 }
 
 #pragma mark - Public API
+
++ (void)initWithNavigationController:(UINavigationController *)navigationController {
+    rootNavigationController = navigationController;
+}
+
++ (void)initWithTabBarController:(UITabBarController *)tabBarController {
+    rootTabBarController = tabBarController;
+}
 
 + (void)showObject:(PTObject *)object {
     [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:NO];
@@ -78,6 +104,9 @@
 + (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
     Class viewControllerClass = [self viewControllerClassForObject:object];
     
+    NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
+             NSStringFromSelector(selector), NSStringFromClass([object class]));
+    
     NSAssert([object respondsToSelector:@selector(identifier)], @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
              NSStringFromClass([object class]));
     
@@ -88,12 +117,6 @@
     } else {
         [self presentViewController:viewController withAnimation:animation];
     }
-}
-
-#pragma mark - Accessors
-
-+ (UINavigationController *)navigationController {
-    return [PTApplicationDelegate sharedDelegate].navigationController;
 }
 
 @end
