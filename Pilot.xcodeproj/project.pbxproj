@@ -40,7 +40,15 @@
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
 		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
 		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
-		DBC7C55C142D38AE003289ED /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
+		DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
+		DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
+		DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC7C59B142D67FD003289ED /* CoreGraphics.framework */; };
+		DBC7C5D0142D6A86003289ED /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
+		DBC7C5D6142D6A86003289ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C5D4142D6A86003289ED /* InfoPlist.strings */; };
+		DBC7C5D8142D6A86003289ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5D7142D6A86003289ED /* main.m */; };
+		DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5DB142D6A86003289ED /* AppDelegate.m */; };
+		DBC7C5DF142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5DD142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld */; };
+		DBC7C5E7142D6AA2003289ED /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
 		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
 		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
@@ -81,6 +89,20 @@
 			remoteGlobalIDString = DB0C4739142BE08700086D0F;
 			remoteInfo = Pilot;
 		};
+		DBC7C5E3142D6A93003289ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0C472F142BE04D00086D0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0C4739142BE08700086D0F;
+			remoteInfo = Pilot;
+		};
+		DBC7C5E5142D6A93003289ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0C472F142BE04D00086D0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0C4749142BE08700086D0F;
+			remoteInfo = PilotTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +138,15 @@
 		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
 		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
 		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
+		DBC7C59B142D67FD003289ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilotTabbarTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC7C5D3142D6A86003289ED /* PilotTabbarTestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PilotTabbarTestApp-Info.plist"; sourceTree = "<group>"; };
+		DBC7C5D5142D6A86003289ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBC7C5D7142D6A86003289ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilotTabbarTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		DBC7C5DA142D6A86003289ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		DBC7C5DB142D6A86003289ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		DBC7C5DE142D6A86003289ED /* PilotTabbarTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PilotTabbarTestApp.xcdatamodel; sourceTree = "<group>"; };
 		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
 		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
 		DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestObject.h; path = Classes/PTTestObject.h; sourceTree = "<group>"; };
@@ -168,6 +199,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBC7C5C8142D6A86003289ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C5E7142D6AA2003289ED /* libPilot.a in Frameworks */,
+				DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */,
+				DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */,
+				DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */,
+				DBC7C5D0142D6A86003289ED /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -198,6 +241,7 @@
 				DB0C473F142BE08700086D0F /* Pilot */,
 				DB0C4755142BE08700086D0F /* PilotTests */,
 				DB005BA3142D0A950043E6BD /* PilotTestApp */,
+				DBC7C5D1142D6A86003289ED /* PilotTabbarTestApp */,
 				DB0C473C142BE08700086D0F /* Frameworks */,
 				DB0C473B142BE08700086D0F /* Products */,
 			);
@@ -209,6 +253,7 @@
 				DB0C473A142BE08700086D0F /* libPilot.a */,
 				DB0C474A142BE08700086D0F /* PilotTests.octest */,
 				DB005B9C142D0A950043E6BD /* PilotTestApp.app */,
+				DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +266,7 @@
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
 				DB06573F142C49C3002B2259 /* UIKit.framework */,
+				DBC7C59B142D67FD003289ED /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,6 +312,28 @@
 			children = (
 				DB0C4757142BE08700086D0F /* PilotTests-Info.plist */,
 				DB0C4758142BE08700086D0F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC7C5D1142D6A86003289ED /* PilotTabbarTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C5DA142D6A86003289ED /* AppDelegate.h */,
+				DBC7C5DB142D6A86003289ED /* AppDelegate.m */,
+				DBC7C5DD142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld */,
+				DBC7C5D2142D6A86003289ED /* Supporting Files */,
+			);
+			path = PilotTabbarTestApp;
+			sourceTree = "<group>";
+		};
+		DBC7C5D2142D6A86003289ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C5D3142D6A86003289ED /* PilotTabbarTestApp-Info.plist */,
+				DBC7C5D4142D6A86003289ED /* InfoPlist.strings */,
+				DBC7C5D7142D6A86003289ED /* main.m */,
+				DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,7 +387,6 @@
 				07CFECEE142D2FF30065A487 /* Post.h in Headers */,
 				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
 				07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */,
-				DBC7C56D142D3C4A003289ED /* TestPilot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +448,25 @@
 			productReference = DB0C474A142BE08700086D0F /* PilotTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		DBC7C5CA142D6A86003289ED /* PilotTabbarTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC7C5E0142D6A86003289ED /* Build configuration list for PBXNativeTarget "PilotTabbarTestApp" */;
+			buildPhases = (
+				DBC7C5C7142D6A86003289ED /* Sources */,
+				DBC7C5C8142D6A86003289ED /* Frameworks */,
+				DBC7C5C9142D6A86003289ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBC7C5E4142D6A93003289ED /* PBXTargetDependency */,
+				DBC7C5E6142D6A93003289ED /* PBXTargetDependency */,
+			);
+			name = PilotTabbarTestApp;
+			productName = PilotTabbarTestApp;
+			productReference = DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -405,6 +491,7 @@
 				DB0C4739142BE08700086D0F /* Pilot */,
 				DB0C4749142BE08700086D0F /* PilotTests */,
 				DB005B9B142D0A950043E6BD /* PilotTestApp */,
+				DBC7C5CA142D6A86003289ED /* PilotTabbarTestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +511,14 @@
 			files = (
 				DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */,
 				DB0C475C142BE08700086D0F /* PilotTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC7C5C9142D6A86003289ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C5D6142D6A86003289ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +570,6 @@
 				07CFECEF142D2FF30065A487 /* Post.m in Sources */,
 				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,
 				07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */,
-				DBC7C56E142D3C4A003289ED /* TestPilot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +578,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C475E142BE08700086D0F /* PilotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC7C5C7142D6A86003289ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C5D8142D6A86003289ED /* main.m in Sources */,
+				DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */,
+				DBC7C5DF142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +609,16 @@
 			target = DB0C4739142BE08700086D0F /* Pilot */;
 			targetProxy = DB0C4752142BE08700086D0F /* PBXContainerItemProxy */;
 		};
+		DBC7C5E4142D6A93003289ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0C4739142BE08700086D0F /* Pilot */;
+			targetProxy = DBC7C5E3142D6A93003289ED /* PBXContainerItemProxy */;
+		};
+		DBC7C5E6142D6A93003289ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0C4749142BE08700086D0F /* PilotTests */;
+			targetProxy = DBC7C5E5142D6A93003289ED /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -520,6 +634,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB0C4759142BE08700086D0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBC7C5D4142D6A86003289ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC7C5D5142D6A86003289ED /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -714,6 +836,57 @@
 			};
 			name = Release;
 		};
+		DBC7C5E1142D6A86003289ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PilotTabbarTestApp/PilotTabbarTestApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PilotTabbarTestApp/PilotTabbarTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBC7C5E2142D6A86003289ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PilotTabbarTestApp/PilotTabbarTestApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PilotTabbarTestApp/PilotTabbarTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -753,6 +926,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DBC7C5E0142D6A86003289ED /* Build configuration list for PBXNativeTarget "PilotTabbarTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC7C5E1142D6A86003289ED /* Debug */,
+				DBC7C5E2142D6A86003289ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
@@ -763,6 +944,16 @@
 			);
 			currentVersion = DB005BB0142D0A950043E6BD /* PilotTestApp.xcdatamodel */;
 			path = PilotTestApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		DBC7C5DD142D6A86003289ED /* PilotTabbarTestApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBC7C5DE142D6A86003289ED /* PilotTabbarTestApp.xcdatamodel */,
+			);
+			currentVersion = DBC7C5DE142D6A86003289ED /* PilotTabbarTestApp.xcdatamodel */;
+			path = PilotTabbarTestApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
