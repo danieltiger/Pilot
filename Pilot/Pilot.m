@@ -61,11 +61,11 @@ static UITabBarController *rootTabBarController = nil;
 
 #pragma mark - Public API
 
-+ (void)initWithNavigationController:(UINavigationController *)navigationController {
++ (void)setupWithNavigationController:(UINavigationController *)navigationController {
     rootNavigationController = navigationController;
 }
 
-+ (void)initWithTabBarController:(UITabBarController *)tabBarController {
++ (void)setupWithTabBarController:(UITabBarController *)tabBarController {
     rootTabBarController = tabBarController;
 }
 

@@ -22,7 +22,7 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];    
     
     PTTestObject *object = [NSEntityDescription insertNewObjectForEntityForName:objectEntityName 
-                                              inManagedObjectContext:appDelegate.managedObjectContext];
+                                                         inManagedObjectContext:appDelegate.managedObjectContext];
     
     // Set message and save.  Saving in factory methods is not normally a good idea, performance wise,
     // but it will do for tests

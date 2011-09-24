@@ -18,12 +18,12 @@
 /**
  *
  */
-+ (void)initWithNavigationController:(UINavigationController *)navigationController;
++ (void)setupWithNavigationController:(UINavigationController *)navigationController;
 
 /**
  *
  */
-+ (void)initWithTabBarController:(UITabBarController *)tabBarController;
++ (void)setupWithTabBarController:(UITabBarController *)tabBarController;
 
 /**
  *

@@ -10,21 +10,15 @@
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
 		07CFECEA142D2F890065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
-		07CFECEE142D2FF30065A487 /* Post.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECEC142D2FF30065A487 /* Post.h */; };
-		07CFECEF142D2FF30065A487 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECED142D2FF30065A487 /* Post.m */; };
 		07CFECF0142D30450065A487 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECF2142D30A40065A487 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */; };
 		07CFECF4142D31620065A487 /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		07CFECF5142D32A60065A487 /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
-		07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECF6142D33CE0065A487 /* PostViewController.h */; };
-		07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECF7142D33CF0065A487 /* PostViewController.m */; };
 		DB005B9E142D0A950043E6BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB005B9F142D0A950043E6BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB005BA2142D0A950043E6BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
 		DB005BA8142D0A950043E6BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB005BA6142D0A950043E6BD /* InfoPlist.strings */; };
 		DB005BAA142D0A950043E6BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB005BA9142D0A950043E6BD /* main.m */; };
-		DB005BAE142D0A950043E6BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAD142D0A950043E6BD /* AppDelegate.m */; };
-		DB005BB1142D0A950043E6BD /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
 		DB005BB9142D0AF60043E6BD /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
 		DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB065795142D0156002B2259 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,25 +32,51 @@
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
 		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
-		DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
-		DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
-		DBC7C55C142D38AE003289ED /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
-		DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
-		DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
-		DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
-		DBD7FBAE142D15D900EC22F9 /* PTTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */; };
-		DBD7FBB1142D15D900EC22F9 /* RedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAF142D15D900EC22F9 /* RedObject.h */; };
-		DBD7FBB2142D15D900EC22F9 /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
-		DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB3142D15D900EC22F9 /* GreenObject.h */; };
+		DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
+		DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
+		DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC7C59B142D67FD003289ED /* CoreGraphics.framework */; };
+		DBC7C5D0142D6A86003289ED /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
+		DBC7C5D6142D6A86003289ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C5D4142D6A86003289ED /* InfoPlist.strings */; };
+		DBC7C5D8142D6A86003289ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5D7142D6A86003289ED /* main.m */; };
+		DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C5DB142D6A86003289ED /* AppDelegate.m */; };
+		DBC7C5E7142D6AA2003289ED /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
+		DBC7C61D142D6D0B003289ED /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C615142D6D0B003289ED /* first.png */; };
+		DBC7C61E142D6D0B003289ED /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C616142D6D0B003289ED /* first@2x.png */; };
+		DBC7C61F142D6D0B003289ED /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C618142D6D0B003289ED /* LeftViewController.m */; };
+		DBC7C620142D6D0B003289ED /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C619142D6D0B003289ED /* second.png */; };
+		DBC7C621142D6D0B003289ED /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C61A142D6D0B003289ED /* second@2x.png */; };
+		DBC7C622142D6D0B003289ED /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C61C142D6D0B003289ED /* RightViewController.m */; };
+		DBC7C646142D73BA003289ED /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECF7142D33CF0065A487 /* PostViewController.m */; };
+		DBC7C647142D73C1003289ED /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECED142D2FF30065A487 /* Post.m */; };
+		DBC7C64D142D745D003289ED /* GreenObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB3142D15D900EC22F9 /* GreenObject.h */; };
+		DBC7C64F142D746F003289ED /* RedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAF142D15D900EC22F9 /* RedObject.h */; };
+		DBC7C650142D746F003289ED /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
+		DBC7C651142D746F003289ED /* PTTestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */; };
+		DBC7C652142D746F003289ED /* PTTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */; };
+		DBC7C653142D746F003289ED /* BlueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBA6142D15D800EC22F9 /* BlueObject.h */; };
+		DBC7C654142D746F003289ED /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
+		DBC7C655142D746F003289ED /* RedObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */; settings = {ATTRIBUTES = (); }; };
+		DBC7C656142D746F003289ED /* RedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */; };
+		DBC7C657142D746F003289ED /* BlueObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */; };
+		DBC7C658142D746F003289ED /* BlueObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */; };
+		DBC7C659142D746F003289ED /* GreenObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC1142D16D500EC22F9 /* GreenObjectViewController.h */; };
+		DBC7C65A142D746F003289ED /* GreenObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */; };
+		DBC7C65B142D746F003289ED /* RootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC5142D180300EC22F9 /* RootViewController.h */; };
+		DBC7C65C142D746F003289ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC6142D180300EC22F9 /* RootViewController.m */; };
+		DBC7C65D142D746F003289ED /* PTTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7C516142D2515003289ED /* PTTestViewController.h */; };
+		DBC7C65E142D746F003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
+		DBC7C65F142D7480003289ED /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB005BAC142D0A950043E6BD /* AppDelegate.h */; };
+		DBC7C660142D7487003289ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAD142D0A950043E6BD /* AppDelegate.m */; };
+		DBC7C66C142D7777003289ED /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
+		DBC7C66D142D7863003289ED /* GreenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB4142D15D900EC22F9 /* GreenObject.m */; };
+		DBC7C66E142D7863003289ED /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
+		DBC7C66F142D7863003289ED /* PTTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */; };
+		DBC7C670142D7863003289ED /* BlueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBA7142D15D800EC22F9 /* BlueObject.m */; };
+		DBC7C671142D7863003289ED /* RedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */; };
+		DBC7C672142D7863003289ED /* BlueObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */; };
+		DBC7C673142D7863003289ED /* GreenObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */; };
+		DBC7C674142D7863003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
 		DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB4142D15D900EC22F9 /* GreenObject.m */; };
-		DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB9142D169A00EC22F9 /* RedObjectViewController.h */; };
-		DBD7FBBC142D169A00EC22F9 /* RedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBA142D169A00EC22F9 /* RedObjectViewController.m */; };
-		DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBBD142D16C200EC22F9 /* BlueObjectViewController.h */; };
-		DBD7FBC0142D16C200EC22F9 /* BlueObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBBE142D16C200EC22F9 /* BlueObjectViewController.m */; };
-		DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC1142D16D500EC22F9 /* GreenObjectViewController.h */; };
-		DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC2142D16D500EC22F9 /* GreenObjectViewController.m */; };
-		DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBC5142D180300EC22F9 /* RootViewController.h */; };
-		DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBC6142D180300EC22F9 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +100,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = DB0C4739142BE08700086D0F;
 			remoteInfo = Pilot;
+		};
+		DBC7C5E3142D6A93003289ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0C472F142BE04D00086D0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0C4739142BE08700086D0F;
+			remoteInfo = Pilot;
+		};
+		DBC7C5E5142D6A93003289ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0C472F142BE04D00086D0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0C4749142BE08700086D0F;
+			remoteInfo = PilotTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -116,6 +150,22 @@
 		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
 		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
 		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
+		DBC7C59B142D67FD003289ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilotTabbarTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC7C5D3142D6A86003289ED /* PilotTabbarTestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PilotTabbarTestApp-Info.plist"; sourceTree = "<group>"; };
+		DBC7C5D5142D6A86003289ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBC7C5D7142D6A86003289ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilotTabbarTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		DBC7C5DA142D6A86003289ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		DBC7C5DB142D6A86003289ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		DBC7C615142D6D0B003289ED /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Classes/first.png; sourceTree = "<group>"; };
+		DBC7C616142D6D0B003289ED /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Classes/first@2x.png"; sourceTree = "<group>"; };
+		DBC7C617142D6D0B003289ED /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = LeftViewController.h; path = Classes/LeftViewController.h; sourceTree = "<group>"; };
+		DBC7C618142D6D0B003289ED /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = Classes/LeftViewController.m; sourceTree = "<group>"; };
+		DBC7C619142D6D0B003289ED /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Classes/second.png; sourceTree = "<group>"; };
+		DBC7C61A142D6D0B003289ED /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Classes/second@2x.png"; sourceTree = "<group>"; };
+		DBC7C61B142D6D0B003289ED /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = RightViewController.h; path = Classes/RightViewController.h; sourceTree = "<group>"; };
+		DBC7C61C142D6D0B003289ED /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = Classes/RightViewController.m; sourceTree = "<group>"; };
 		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
 		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
 		DBD7FBAB142D15D900EC22F9 /* PTTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestObject.h; path = Classes/PTTestObject.h; sourceTree = "<group>"; };
@@ -168,6 +218,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBC7C5C8142D6A86003289ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C5E7142D6AA2003289ED /* libPilot.a in Frameworks */,
+				DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */,
+				DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */,
+				DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */,
+				DBC7C5D0142D6A86003289ED /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -198,6 +260,7 @@
 				DB0C473F142BE08700086D0F /* Pilot */,
 				DB0C4755142BE08700086D0F /* PilotTests */,
 				DB005BA3142D0A950043E6BD /* PilotTestApp */,
+				DBC7C5D1142D6A86003289ED /* PilotTabbarTestApp */,
 				DB0C473C142BE08700086D0F /* Frameworks */,
 				DB0C473B142BE08700086D0F /* Products */,
 			);
@@ -209,6 +272,7 @@
 				DB0C473A142BE08700086D0F /* libPilot.a */,
 				DB0C474A142BE08700086D0F /* PilotTests.octest */,
 				DB005B9C142D0A950043E6BD /* PilotTestApp.app */,
+				DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +285,7 @@
 				DB0C473D142BE08700086D0F /* Foundation.framework */,
 				DB0C474B142BE08700086D0F /* SenTestingKit.framework */,
 				DB06573F142C49C3002B2259 /* UIKit.framework */,
+				DBC7C59B142D67FD003289ED /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -270,6 +335,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DBC7C5D1142D6A86003289ED /* PilotTabbarTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C614142D6CF2003289ED /* Classes */,
+				DBC7C5D2142D6A86003289ED /* Supporting Files */,
+			);
+			path = PilotTabbarTestApp;
+			sourceTree = "<group>";
+		};
+		DBC7C5D2142D6A86003289ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C5D3142D6A86003289ED /* PilotTabbarTestApp-Info.plist */,
+				DBC7C5D4142D6A86003289ED /* InfoPlist.strings */,
+				DBC7C5D7142D6A86003289ED /* main.m */,
+				DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC7C614142D6CF2003289ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7C5DA142D6A86003289ED /* AppDelegate.h */,
+				DBC7C5DB142D6A86003289ED /* AppDelegate.m */,
+				DBC7C615142D6D0B003289ED /* first.png */,
+				DBC7C616142D6D0B003289ED /* first@2x.png */,
+				DBC7C617142D6D0B003289ED /* LeftViewController.h */,
+				DBC7C618142D6D0B003289ED /* LeftViewController.m */,
+				DBC7C619142D6D0B003289ED /* second.png */,
+				DBC7C61A142D6D0B003289ED /* second@2x.png */,
+				DBC7C61B142D6D0B003289ED /* RightViewController.h */,
+				DBC7C61C142D6D0B003289ED /* RightViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		DBD7FBB8142D166C00EC22F9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,19 +409,17 @@
 				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
 				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
 				DB065795142D0156002B2259 /* (null) in Headers */,
-				DBD7FBA8142D15D800EC22F9 /* BlueObject.h in Headers */,
-				DBD7FBAD142D15D900EC22F9 /* PTTestObject.h in Headers */,
-				DBD7FBB1142D15D900EC22F9 /* RedObject.h in Headers */,
-				DBD7FBB5142D15D900EC22F9 /* GreenObject.h in Headers */,
-				DBD7FBBB142D169A00EC22F9 /* RedObjectViewController.h in Headers */,
-				DBD7FBBF142D16C200EC22F9 /* BlueObjectViewController.h in Headers */,
-				DBD7FBC3142D16D500EC22F9 /* GreenObjectViewController.h in Headers */,
-				DBD7FBC7142D180300EC22F9 /* RootViewController.h in Headers */,
-				DBC7C518142D2515003289ED /* PTTestViewController.h in Headers */,
-				07CFECEE142D2FF30065A487 /* Post.h in Headers */,
 				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
-				07CFECF8142D33CF0065A487 /* PostViewController.h in Headers */,
-				DBC7C56D142D3C4A003289ED /* TestPilot.h in Headers */,
+				DBC7C64D142D745D003289ED /* GreenObject.h in Headers */,
+				DBC7C64F142D746F003289ED /* RedObject.h in Headers */,
+				DBC7C651142D746F003289ED /* PTTestObject.h in Headers */,
+				DBC7C653142D746F003289ED /* BlueObject.h in Headers */,
+				DBC7C655142D746F003289ED /* RedObjectViewController.h in Headers */,
+				DBC7C657142D746F003289ED /* BlueObjectViewController.h in Headers */,
+				DBC7C659142D746F003289ED /* GreenObjectViewController.h in Headers */,
+				DBC7C65B142D746F003289ED /* RootViewController.h in Headers */,
+				DBC7C65D142D746F003289ED /* PTTestViewController.h in Headers */,
+				DBC7C65F142D7480003289ED /* AppDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +481,25 @@
 			productReference = DB0C474A142BE08700086D0F /* PilotTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		DBC7C5CA142D6A86003289ED /* PilotTabbarTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC7C5E0142D6A86003289ED /* Build configuration list for PBXNativeTarget "PilotTabbarTestApp" */;
+			buildPhases = (
+				DBC7C5C7142D6A86003289ED /* Sources */,
+				DBC7C5C8142D6A86003289ED /* Frameworks */,
+				DBC7C5C9142D6A86003289ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBC7C5E4142D6A93003289ED /* PBXTargetDependency */,
+				DBC7C5E6142D6A93003289ED /* PBXTargetDependency */,
+			);
+			name = PilotTabbarTestApp;
+			productName = PilotTabbarTestApp;
+			productReference = DBC7C5CB142D6A86003289ED /* PilotTabbarTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -405,6 +524,7 @@
 				DB0C4739142BE08700086D0F /* Pilot */,
 				DB0C4749142BE08700086D0F /* PilotTests */,
 				DB005B9B142D0A950043E6BD /* PilotTestApp */,
+				DBC7C5CA142D6A86003289ED /* PilotTabbarTestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +544,18 @@
 			files = (
 				DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */,
 				DB0C475C142BE08700086D0F /* PilotTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC7C5C9142D6A86003289ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C5D6142D6A86003289ED /* InfoPlist.strings in Resources */,
+				DBC7C61D142D6D0B003289ED /* first.png in Resources */,
+				DBC7C61E142D6D0B003289ED /* first@2x.png in Resources */,
+				DBC7C620142D6D0B003289ED /* second.png in Resources */,
+				DBC7C621142D6D0B003289ED /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +583,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB005BAA142D0A950043E6BD /* main.m in Sources */,
-				DB005BAE142D0A950043E6BD /* AppDelegate.m in Sources */,
-				DB005BB1142D0A950043E6BD /* PilotTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,19 +593,18 @@
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
 				DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */,
 				DB065796142D0156002B2259 /* (null) in Sources */,
-				DBD7FBA9142D15D800EC22F9 /* BlueObject.m in Sources */,
-				DBD7FBAE142D15D900EC22F9 /* PTTestObject.m in Sources */,
-				DBD7FBB2142D15D900EC22F9 /* RedObject.m in Sources */,
 				DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */,
-				DBD7FBBC142D169A00EC22F9 /* RedObjectViewController.m in Sources */,
-				DBD7FBC0142D16C200EC22F9 /* BlueObjectViewController.m in Sources */,
-				DBD7FBC4142D16D500EC22F9 /* GreenObjectViewController.m in Sources */,
-				DBD7FBC8142D180300EC22F9 /* RootViewController.m in Sources */,
-				DBC7C519142D2515003289ED /* PTTestViewController.m in Sources */,
-				07CFECEF142D2FF30065A487 /* Post.m in Sources */,
 				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,
-				07CFECF9142D33CF0065A487 /* PostViewController.m in Sources */,
-				DBC7C56E142D3C4A003289ED /* TestPilot.m in Sources */,
+				DBC7C650142D746F003289ED /* RedObject.m in Sources */,
+				DBC7C652142D746F003289ED /* PTTestObject.m in Sources */,
+				DBC7C654142D746F003289ED /* BlueObject.m in Sources */,
+				DBC7C656142D746F003289ED /* RedObjectViewController.m in Sources */,
+				DBC7C658142D746F003289ED /* BlueObjectViewController.m in Sources */,
+				DBC7C65A142D746F003289ED /* GreenObjectViewController.m in Sources */,
+				DBC7C65C142D746F003289ED /* RootViewController.m in Sources */,
+				DBC7C65E142D746F003289ED /* PTTestViewController.m in Sources */,
+				DBC7C660142D7487003289ED /* AppDelegate.m in Sources */,
+				DBC7C66C142D7777003289ED /* PilotTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +613,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C475E142BE08700086D0F /* PilotTests.m in Sources */,
+				DBC7C646142D73BA003289ED /* PostViewController.m in Sources */,
+				DBC7C647142D73C1003289ED /* Post.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC7C5C7142D6A86003289ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC7C66D142D7863003289ED /* GreenObject.m in Sources */,
+				DBC7C66E142D7863003289ED /* RedObject.m in Sources */,
+				DBC7C66F142D7863003289ED /* PTTestObject.m in Sources */,
+				DBC7C670142D7863003289ED /* BlueObject.m in Sources */,
+				DBC7C671142D7863003289ED /* RedObjectViewController.m in Sources */,
+				DBC7C672142D7863003289ED /* BlueObjectViewController.m in Sources */,
+				DBC7C673142D7863003289ED /* GreenObjectViewController.m in Sources */,
+				DBC7C674142D7863003289ED /* PTTestViewController.m in Sources */,
+				DBC7C5D8142D6A86003289ED /* main.m in Sources */,
+				DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */,
+				DBC7C61F142D6D0B003289ED /* LeftViewController.m in Sources */,
+				DBC7C622142D6D0B003289ED /* RightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +655,16 @@
 			target = DB0C4739142BE08700086D0F /* Pilot */;
 			targetProxy = DB0C4752142BE08700086D0F /* PBXContainerItemProxy */;
 		};
+		DBC7C5E4142D6A93003289ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0C4739142BE08700086D0F /* Pilot */;
+			targetProxy = DBC7C5E3142D6A93003289ED /* PBXContainerItemProxy */;
+		};
+		DBC7C5E6142D6A93003289ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0C4749142BE08700086D0F /* PilotTests */;
+			targetProxy = DBC7C5E5142D6A93003289ED /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -520,6 +680,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB0C4759142BE08700086D0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBC7C5D4142D6A86003289ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC7C5D5142D6A86003289ED /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -714,6 +882,57 @@
 			};
 			name = Release;
 		};
+		DBC7C5E1142D6A86003289ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PilotTabbarTestApp/PilotTabbarTestApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PilotTabbarTestApp/PilotTabbarTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBC7C5E2142D6A86003289ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PilotTabbarTestApp/PilotTabbarTestApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PilotTabbarTestApp/PilotTabbarTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -749,6 +968,15 @@
 			buildConfigurations = (
 				DB0C4763142BE08700086D0F /* Debug */,
 				DB0C4764142BE08700086D0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC7C5E0142D6A86003289ED /* Build configuration list for PBXNativeTarget "PilotTabbarTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC7C5E1142D6A86003289ED /* Debug */,
+				DBC7C5E2142D6A86003289ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

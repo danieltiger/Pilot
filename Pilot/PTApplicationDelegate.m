@@ -26,7 +26,7 @@
     [self.window addSubview:self.navigationController.view];
     [self.window makeKeyAndVisible];
     
-    [Pilot initWithNavigationController:self.navigationController];
+    [Pilot setupWithNavigationController:self.navigationController];
     
     return  YES;
 }
