@@ -53,11 +53,11 @@
     [super viewDidLoad];
     
     // Title
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    NSInteger index = [[[Pilot navigationController] viewControllers] count];    
-    titleLabel.text = [NSString stringWithFormat:@"%@ #%d", NSStringFromClass([self class]), index];
-    [titleLabel sizeToFit];
-    [self.view addSubview:titleLabel];
+//    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
+//    NSInteger index = [[[Pilot navigationController] viewControllers] count];    
+//    titleLabel.text = [NSString stringWithFormat:@"%@ #%d", NSStringFromClass([self class]), index];
+//    [titleLabel sizeToFit];
+//    [self.view addSubview:titleLabel];
     
     // Message
     UILabel *objectMessageLabel = [[[UILabel alloc] init] autorelease];

@@ -12,6 +12,10 @@
 @interface PTObject : NSManagedObject {
 }
 
+/**
+ * Only subclass if you need something other than the object URI as an NSString.
+ */
+
 - (NSString *)identifier;
 
 @end

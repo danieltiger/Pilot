@@ -32,10 +32,4 @@
     return object;
 }
 
-#pragma mark - Pilot
-
-- (NSString *)identifier {
-    return self.message;
-}
-
 @end

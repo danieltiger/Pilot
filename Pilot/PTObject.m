@@ -12,7 +12,7 @@
 @implementation PTObject
 
 - (NSString *)identifier {
-    return nil;
+    return [[[self objectID] URIRepresentation] absoluteString];
 }
 
 @end
