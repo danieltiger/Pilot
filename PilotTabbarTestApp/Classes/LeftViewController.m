@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "LeftViewController.h"
 
-@implementation FirstViewController
+@implementation LeftViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +30,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [super viewDidLoad]; 
+    self.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:1.0];
 }
 
 - (void)viewDidUnload

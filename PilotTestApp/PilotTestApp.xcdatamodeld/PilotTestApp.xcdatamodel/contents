@@ -7,9 +7,9 @@
     </entity>
     <entity name="RedObject" representedClassName="RedObject" parentEntity="PTTestObject" syncable="YES"/>
     <elements>
-        <element name="RedObject" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="BlueObject" positionX="160" positionY="192" width="128" height="45"/>
         <element name="GreenObject" positionX="160" positionY="192" width="128" height="45"/>
         <element name="PTTestObject" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="BlueObject" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="RedObject" positionX="160" positionY="192" width="128" height="45"/>
     </elements>
 </model>

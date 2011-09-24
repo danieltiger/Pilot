@@ -58,7 +58,7 @@
 //    titleLabel.text = [NSString stringWithFormat:@"%@ #%d", NSStringFromClass([self class]), index];
 //    [titleLabel sizeToFit];
 //    [self.view addSubview:titleLabel];
-    
+        
     // Message
     UILabel *objectMessageLabel = [[[UILabel alloc] init] autorelease];
     objectMessageLabel.numberOfLines = 0;

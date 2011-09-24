@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  SecondViewController.h
 //  Junk
 //
 //  Created by Andrew Smith on 9/23/11.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTTestViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface RightViewController : PTTestViewController
+
 
 @end

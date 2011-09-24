@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstViewController.h"
-#import "SecondViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
+#import "PTTestViewController.h"
+
+#import "Pilot.h"
 
 @implementation AppDelegate
 
@@ -30,11 +33,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    
+    UINavigationController *navController1 = 
+    [[UINavigationController alloc] initWithRootViewController:[[[LeftViewController alloc] init] autorelease]];    
+    
+    UINavigationController *navController2 = 
+    [[UINavigationController alloc] initWithRootViewController:[[[RightViewController alloc] init] autorelease]];
+    
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, nil];
+    
+    // SETUP PILOT
+    [Pilot setupWithTabBarController:self.tabBarController];
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -129,7 +140,7 @@
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PilotTabbarTestApp" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PilotTestApp" withExtension:@"momd"];
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return __managedObjectModel;
 }
@@ -145,7 +156,14 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PilotTabbarTestApp.sqlite"];
+    // nuke old store
+    NSURL *oldStoreURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PilotTestApp.sqlite"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (oldStoreURL) {
+        [fileManager removeItemAtURL:oldStoreURL error:NULL];
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PilotTestApp.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
