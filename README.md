@@ -7,8 +7,8 @@ Contributing
 
 Forks, patches and other feedback are always welcome. 
 
-### CoreTable is brought to you by [Posterous](http://posterous.com) ###
+### Pilot is brought to you by [Posterous](http://posterous.com) ###
 
 Contributors:
-* [Arik Devens](http://github.com/danieltiger)
-* [Andrew B. Smith](http://github.com/drewsmits).
+*[Arik Devens](http://github.com/danieltiger)
+*[Andrew B. Smith](http://github.com/drewsmits).
