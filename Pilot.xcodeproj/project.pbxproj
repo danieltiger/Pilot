@@ -30,8 +30,6 @@
 		DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB0C4758142BE08700086D0F /* InfoPlist.strings */; };
 		DB0C475C142BE08700086D0F /* PilotTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DB0C475B142BE08700086D0F /* PilotTests.h */; };
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
-		DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */; };
 		DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC7C59B142D67FD003289ED /* CoreGraphics.framework */; };
@@ -146,8 +144,6 @@
 		DB0C4759142BE08700086D0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB0C475B142BE08700086D0F /* PilotTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilotTests.h; sourceTree = "<group>"; };
 		DB0C475D142BE08700086D0F /* PilotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PilotTests.m; sourceTree = "<group>"; };
-		DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTApplicationDelegate.h; sourceTree = "<group>"; };
-		DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTApplicationDelegate.m; sourceTree = "<group>"; };
 		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
 		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
 		DBC7C59B142D67FD003289ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,11 +156,11 @@
 		DBC7C5DB142D6A86003289ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		DBC7C615142D6D0B003289ED /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Classes/first.png; sourceTree = "<group>"; };
 		DBC7C616142D6D0B003289ED /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Classes/first@2x.png"; sourceTree = "<group>"; };
-		DBC7C617142D6D0B003289ED /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = LeftViewController.h; path = Classes/LeftViewController.h; sourceTree = "<group>"; };
+		DBC7C617142D6D0B003289ED /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftViewController.h; path = Classes/LeftViewController.h; sourceTree = "<group>"; };
 		DBC7C618142D6D0B003289ED /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = Classes/LeftViewController.m; sourceTree = "<group>"; };
 		DBC7C619142D6D0B003289ED /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Classes/second.png; sourceTree = "<group>"; };
 		DBC7C61A142D6D0B003289ED /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Classes/second@2x.png"; sourceTree = "<group>"; };
-		DBC7C61B142D6D0B003289ED /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = RightViewController.h; path = Classes/RightViewController.h; sourceTree = "<group>"; };
+		DBC7C61B142D6D0B003289ED /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = Classes/RightViewController.h; sourceTree = "<group>"; };
 		DBC7C61C142D6D0B003289ED /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = Classes/RightViewController.m; sourceTree = "<group>"; };
 		DBD7FBA6142D15D800EC22F9 /* BlueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueObject.h; path = Classes/BlueObject.h; sourceTree = "<group>"; };
 		DBD7FBA7142D15D800EC22F9 /* BlueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueObject.m; path = Classes/BlueObject.m; sourceTree = "<group>"; };
@@ -295,8 +291,6 @@
 			children = (
 				DB0C4742142BE08700086D0F /* Pilot.h */,
 				DB0C4743142BE08700086D0F /* Pilot.m */,
-				DB0C477E142BF84600086D0F /* PTApplicationDelegate.h */,
-				DB0C477F142BF84600086D0F /* PTApplicationDelegate.m */,
 				07CFECC2142D02500065A487 /* PTObject.h */,
 				07CFECC3142D02500065A487 /* PTObject.m */,
 				DB0C4740142BE08700086D0F /* Supporting Files */,
@@ -406,7 +400,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB0C4780142BF84600086D0F /* PTApplicationDelegate.h in Headers */,
 				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
 				DB065795142D0156002B2259 /* (null) in Headers */,
 				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
@@ -591,7 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
-				DB0C4781142BF84600086D0F /* PTApplicationDelegate.m in Sources */,
 				DB065796142D0156002B2259 /* (null) in Sources */,
 				DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */,
 				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,

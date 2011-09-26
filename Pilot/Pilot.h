@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "PTApplicationDelegate.h"
 #import "PTObject.h"
 
 

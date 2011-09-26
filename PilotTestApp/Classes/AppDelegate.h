@@ -9,7 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "Pilot/PTApplicationDelegate.h"
 
-@interface AppDelegate : PTApplicationDelegate
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    UINavigationController *navigationController;
+}
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
+/**
+ * The UINavigationControllers RootViewController
+ */
+@property (nonatomic, readonly) UIViewController *rootViewController;
+
+/**
+ * The apps navigation controller.
+ */
+@property (nonatomic, readonly) UINavigationController *navigationController;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

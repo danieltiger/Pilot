@@ -8,15 +8,21 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "Pilot.h"
 
 @implementation AppDelegate
+
+@synthesize window = _window;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 - (void)dealloc
-{
+{    
+    [navigationController release];
+    [_window release];
+
     [__managedObjectContext release];
     [__managedObjectModel release];
     [__persistentStoreCoordinator release];
@@ -25,7 +31,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    return [super application:application didFinishLaunchingWithOptions:launchOptions];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    [self.window addSubview:self.navigationController.view];
+    [self.window makeKeyAndVisible];
+    
+    [Pilot setupWithNavigationController:self.navigationController];
+    
+    return  YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -83,10 +96,16 @@
     }
 }
 
-#pragma mark - Pilot
+#pragma - Accessors
 
 - (UIViewController *)rootViewController {
     return [[[RootViewController alloc] init] autorelease];
+}
+
+- (UINavigationController *)navigationController {
+    if (navigationController) return [[navigationController retain] autorelease];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:[self rootViewController]];
+    return [[navigationController retain] autorelease];
 }
 
 #pragma mark - Core Data stack
