@@ -10,6 +10,6 @@
 
 @interface PostViewController : UIViewController
 
-- (id)initWithObjectIdentifier:(NSString *)string;
+- (id)initWithObjectURI:(NSURL *)objectURI;
 
 @end

@@ -16,7 +16,7 @@
 
 @property (nonatomic, copy) NSString *objectMessage;
 
-- (id)initWithObjectIdentifier:(NSString *)objectIdentifier;
+- (id)initWithObjectURI:(NSURL *)objectURI;
 
 /**
  * Convenience function to automatically layout buttons and titles

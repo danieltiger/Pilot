@@ -32,10 +32,10 @@
     return self;
 }
 
-- (id)initWithObjectIdentifier:(NSString *)objectIdentifier {
+- (id)initWithObjectURI:(NSURL *)objectURL {
     
     if (self = [self initWithNibName:nil bundle:nil]) {
-        self.objectMessage = objectIdentifier;
+        self.objectMessage = [NSString stringWithFormat:@"%@",objectURL];
     }
     return self;
 }

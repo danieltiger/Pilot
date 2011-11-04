@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Pilot/PTApplicationDelegate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     UINavigationController *navigationController;

@@ -6,9 +6,8 @@
 //  Copyright (c) 2011 Pilot. All rights reserved.
 //
 
-#import "Pilot/PTObject.h"
+#import <CoreData/CoreData.h>
 
-
-@interface Post : PTObject
+@interface Post : NSManagedObject
 
 @end

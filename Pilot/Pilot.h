@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-#import "PTObject.h"
 
 
 @interface Pilot : NSObject
@@ -27,46 +27,46 @@
 /**
  *
  */
-+ (void)showObject:(PTObject *)object;
++ (void)showObject:(NSManagedObject *)object;
 
 /**
  *
  */
-+ (void)showObjectAsModal:(PTObject *)object;
++ (void)showObjectAsModal:(NSManagedObject *)object;
 
 /**
  *
  */
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector;
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector;
 
 /**
  *
  */
-+ (void)showObjectAsModal:(PTObject *)object withSelector:(SEL)selector;
++ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector;
 
 /**
  *
  */
-+ (void)showObject:(PTObject *)object animation:(UIViewAnimationTransition)animation;
++ (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation;
 
 /**
  *
  */
-+ (void)showObjectAsModal:(PTObject *)object animation:(UIViewAnimationTransition)animation;
++ (void)showObjectAsModal:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation;
 
 /**
  *
  */
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
 
 /**
  *
  */
-+ (void)showObjectAsModal:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
++ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
 
 /**
  *
  */
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal;
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal;
 
 @end

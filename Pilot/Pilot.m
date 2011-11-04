@@ -9,8 +9,8 @@
 #import "Pilot.h"
 
 
-@interface Pilot (hidden)
-+ (Class)viewControllerClassForObject:(PTObject *)object;
+@interface Pilot (Private)
++ (Class)viewControllerClassForObject:(NSManagedObject *)object;
 + (SEL)defaultInitializer;
 + (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation;
 + (void)presentViewControllerAsModal:(id)viewController withAnimation:(UIViewAnimationTransition)animation;
@@ -24,7 +24,7 @@ static UITabBarController *rootTabBarController = nil;
 
 #pragma mark - Private Methods
 
-+ (Class)viewControllerClassForObject:(PTObject *)object {
++ (Class)viewControllerClassForObject:(NSManagedObject *)object {
     NSString *objectClassName = NSStringFromClass([object class]);
     NSString *viewControllerClassName = [NSString stringWithFormat:@"%@ViewController", objectClassName];
 
@@ -34,7 +34,7 @@ static UITabBarController *rootTabBarController = nil;
 }
 
 + (SEL)defaultInitializer {
-    return NSSelectorFromString(@"initWithObjectIdentifier:");
+    return NSSelectorFromString(@"initWithObjectURI:");
 }
 
 + (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation {
@@ -69,39 +69,39 @@ static UITabBarController *rootTabBarController = nil;
     rootTabBarController = tabBarController;
 }
 
-+ (void)showObject:(PTObject *)object {
++ (void)showObject:(NSManagedObject *)object {
     [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:NO];
 }
 
-+ (void)showObjectAsModal:(PTObject *)object {
++ (void)showObjectAsModal:(NSManagedObject *)object {
     [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:YES];
 }
 
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector {
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector {
     [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone asModal:NO];
 }
 
-+ (void)showObjectAsModal:(PTObject *)object withSelector:(SEL)selector {
++ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector {
     [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone asModal:YES];
 }
 
-+ (void)showObject:(PTObject *)object animation:(UIViewAnimationTransition)animation {
++ (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation {
     [self showObject:object withSelector:[self defaultInitializer] animation:animation asModal:NO];
 }
 
-+ (void)showObjectAsModal:(PTObject *)object animation:(UIViewAnimationTransition)animation {
++ (void)showObjectAsModal:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation {
     [self showObject:object withSelector:[self defaultInitializer] animation:animation asModal:YES];
 }
 
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
     [self showObject:object withSelector:selector animation:animation asModal:NO];
 }
 
-+ (void)showObjectAsModal:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
++ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
     [self showObject:object withSelector:selector animation:animation asModal:YES];
 }
 
-+ (void)showObject:(PTObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
     Class viewControllerClass = [self viewControllerClassForObject:object];
     
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
@@ -110,7 +110,7 @@ static UITabBarController *rootTabBarController = nil;
     NSAssert([object respondsToSelector:@selector(identifier)], @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
              NSStringFromClass([object class]));
     
-    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:[object identifier]] autorelease];
+    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation] autorelease];
     
     if (asModal) {
         [self presentViewControllerAsModal:viewController withAnimation:animation];

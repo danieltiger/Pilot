@@ -19,7 +19,7 @@
     return self;
 }
 
-- (id)initWithObjectIdentifier:(NSString *)string {
+- (id)initWithObjectURI:(NSURL *)objectURI {
     return [self initWithNibName:nil bundle:nil];
 }
 
