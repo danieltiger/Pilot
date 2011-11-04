@@ -25,6 +25,11 @@
 + (void)setupWithTabBarController:(UITabBarController *)tabBarController;
 
 /**
+ * Reset Pilot to a clean state.
+ */
++ (void)reset;
+
+/**
  *
  */
 + (void)showObject:(NSManagedObject *)object;

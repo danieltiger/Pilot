@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "Pilot/PTObject.h"
 
-@interface PTTestObject : PTObject
+@interface PTTestObject : NSManagedObject
 
 @property (nonatomic, retain) NSString * message;
 

@@ -10,10 +10,8 @@
 		072D6F57142C06920027CDB6 /* Pilot.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0C4742142BE08700086D0F /* Pilot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECC1142D02360065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
 		07CFECEA142D2F890065A487 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
-		07CFECF0142D30450065A487 /* PTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFECC2142D02500065A487 /* PTObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFECF2142D30A40065A487 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */; };
 		07CFECF4142D31620065A487 /* libPilot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473A142BE08700086D0F /* libPilot.a */; };
-		07CFECF5142D32A60065A487 /* PTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECC3142D02500065A487 /* PTObject.m */; };
 		DB005B9E142D0A950043E6BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DB005B9F142D0A950043E6BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DB005BA2142D0A950043E6BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFECC0142D02360065A487 /* CoreData.framework */; };
@@ -30,6 +28,8 @@
 		DB0C475A142BE08700086D0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB0C4758142BE08700086D0F /* InfoPlist.strings */; };
 		DB0C475C142BE08700086D0F /* PilotTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DB0C475B142BE08700086D0F /* PilotTests.h */; };
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
+		DB895D0514646C2200EDD59E /* PilotTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB895D0314646C2200EDD59E /* PilotTestModel.xcdatamodeld */; };
+		DB895D0814646CE300EDD59E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DB895D0714646CE300EDD59E /* Post.m */; };
 		DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC7C59B142D67FD003289ED /* CoreGraphics.framework */; };
@@ -45,7 +45,6 @@
 		DBC7C621142D6D0B003289ED /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC7C61A142D6D0B003289ED /* second@2x.png */; };
 		DBC7C622142D6D0B003289ED /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C61C142D6D0B003289ED /* RightViewController.m */; };
 		DBC7C646142D73BA003289ED /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECF7142D33CF0065A487 /* PostViewController.m */; };
-		DBC7C647142D73C1003289ED /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFECED142D2FF30065A487 /* Post.m */; };
 		DBC7C64D142D745D003289ED /* GreenObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBB3142D15D900EC22F9 /* GreenObject.h */; };
 		DBC7C64F142D746F003289ED /* RedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD7FBAF142D15D900EC22F9 /* RedObject.h */; };
 		DBC7C650142D746F003289ED /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
@@ -118,10 +117,6 @@
 /* Begin PBXFileReference section */
 		072D6F5E142C07CD0027CDB6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		07CFECC0142D02360065A487 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		07CFECC2142D02500065A487 /* PTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTObject.h; sourceTree = "<group>"; };
-		07CFECC3142D02500065A487 /* PTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTObject.m; sourceTree = "<group>"; };
-		07CFECEC142D2FF30065A487 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		07CFECED142D2FF30065A487 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		07CFECF6142D33CE0065A487 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		07CFECF7142D33CF0065A487 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		DB005B9C142D0A950043E6BD /* PilotTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilotTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +139,9 @@
 		DB0C4759142BE08700086D0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB0C475B142BE08700086D0F /* PilotTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PilotTests.h; sourceTree = "<group>"; };
 		DB0C475D142BE08700086D0F /* PilotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PilotTests.m; sourceTree = "<group>"; };
+		DB895D0414646C2200EDD59E /* PilotTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PilotTestModel.xcdatamodel; sourceTree = "<group>"; };
+		DB895D0614646CE300EDD59E /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		DB895D0714646CE300EDD59E /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		DBC7C516142D2515003289ED /* PTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTTestViewController.h; path = Classes/PTTestViewController.h; sourceTree = "<group>"; };
 		DBC7C517142D2515003289ED /* PTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTTestViewController.m; path = Classes/PTTestViewController.m; sourceTree = "<group>"; };
 		DBC7C59B142D67FD003289ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -290,8 +288,6 @@
 			children = (
 				DB0C4742142BE08700086D0F /* Pilot.h */,
 				DB0C4743142BE08700086D0F /* Pilot.m */,
-				07CFECC2142D02500065A487 /* PTObject.h */,
-				07CFECC3142D02500065A487 /* PTObject.m */,
 				DB0C4755142BE08700086D0F /* PilotTests */,
 				DB0C4740142BE08700086D0F /* Supporting Files */,
 			);
@@ -309,12 +305,13 @@
 		DB0C4755142BE08700086D0F /* PilotTests */ = {
 			isa = PBXGroup;
 			children = (
-				07CFECEC142D2FF30065A487 /* Post.h */,
-				07CFECED142D2FF30065A487 /* Post.m */,
+				DB895D0614646CE300EDD59E /* Post.h */,
+				DB895D0714646CE300EDD59E /* Post.m */,
 				07CFECF6142D33CE0065A487 /* PostViewController.h */,
 				07CFECF7142D33CF0065A487 /* PostViewController.m */,
 				DB0C475B142BE08700086D0F /* PilotTests.h */,
 				DB0C475D142BE08700086D0F /* PilotTests.m */,
+				DB895D0314646C2200EDD59E /* PilotTestModel.xcdatamodeld */,
 				DB0C4756142BE08700086D0F /* Supporting Files */,
 			);
 			path = PilotTests;
@@ -402,7 +399,6 @@
 			files = (
 				072D6F57142C06920027CDB6 /* Pilot.h in Headers */,
 				DB065795142D0156002B2259 /* (null) in Headers */,
-				07CFECF0142D30450065A487 /* PTObject.h in Headers */,
 				DBC7C64D142D745D003289ED /* GreenObject.h in Headers */,
 				DBC7C64F142D746F003289ED /* RedObject.h in Headers */,
 				DBC7C651142D746F003289ED /* PTTestObject.h in Headers */,
@@ -586,7 +582,6 @@
 				DB0C4744142BE08700086D0F /* Pilot.m in Sources */,
 				DB065796142D0156002B2259 /* (null) in Sources */,
 				DBD7FBB6142D15D900EC22F9 /* GreenObject.m in Sources */,
-				07CFECF5142D32A60065A487 /* PTObject.m in Sources */,
 				DBC7C650142D746F003289ED /* RedObject.m in Sources */,
 				DBC7C652142D746F003289ED /* PTTestObject.m in Sources */,
 				DBC7C654142D746F003289ED /* BlueObject.m in Sources */,
@@ -606,7 +601,8 @@
 			files = (
 				DB0C475E142BE08700086D0F /* PilotTests.m in Sources */,
 				DBC7C646142D73BA003289ED /* PostViewController.m in Sources */,
-				DBC7C647142D73C1003289ED /* Post.m in Sources */,
+				DB895D0514646C2200EDD59E /* PilotTestModel.xcdatamodeld in Sources */,
+				DB895D0814646CE300EDD59E /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +979,16 @@
 			);
 			currentVersion = DB005BB0142D0A950043E6BD /* PilotTestApp.xcdatamodel */;
 			path = PilotTestApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		DB895D0314646C2200EDD59E /* PilotTestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB895D0414646C2200EDD59E /* PilotTestModel.xcdatamodel */,
+			);
+			currentVersion = DB895D0414646C2200EDD59E /* PilotTestModel.xcdatamodel */;
+			path = PilotTestModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -69,6 +69,11 @@ static UITabBarController *rootTabBarController = nil;
     rootTabBarController = tabBarController;
 }
 
++ (void)reset {
+    rootNavigationController = nil;
+    rootTabBarController = nil;
+}
+
 + (void)showObject:(NSManagedObject *)object {
     [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:NO];
 }
@@ -107,7 +112,7 @@ static UITabBarController *rootTabBarController = nil;
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
              NSStringFromSelector(selector), NSStringFromClass([object class]));
     
-    NSAssert([object respondsToSelector:@selector(identifier)], @"PILOT ERROR: Could not find an instance variable named identifier on object %@", 
+    NSAssert([object isKindOfClass:[NSManagedObject class]], @"PILOT ERROR: Object %@ is not a sublcass of NSManagedObject", 
              NSStringFromClass([object class]));
     
     id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation] autorelease];

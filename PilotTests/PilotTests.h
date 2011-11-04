@@ -7,6 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
 @interface PilotTests : SenTestCase {
@@ -14,6 +15,9 @@
     NSManagedObjectContext *context;
     NSManagedObjectModel *model;
     NSPersistentStore *store;
+
+    UIViewController *rootViewController;
+    UINavigationController *navController;
 }
 
 @end
