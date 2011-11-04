@@ -30,6 +30,8 @@
 		DB0C475E142BE08700086D0F /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C475D142BE08700086D0F /* PilotTests.m */; };
 		DB895D0514646C2200EDD59E /* PilotTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB895D0314646C2200EDD59E /* PilotTestModel.xcdatamodeld */; };
 		DB895D0814646CE300EDD59E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DB895D0714646CE300EDD59E /* Post.m */; };
+		DB895D0D1464746600EDD59E /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
+		DB895D0E1464746700EDD59E /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
 		DBC7C5CD142D6A86003289ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB06573F142C49C3002B2259 /* UIKit.framework */; };
 		DBC7C5CE142D6A86003289ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C473D142BE08700086D0F /* Foundation.framework */; };
 		DBC7C5CF142D6A86003289ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC7C59B142D67FD003289ED /* CoreGraphics.framework */; };
@@ -64,7 +66,6 @@
 		DBC7C65E142D746F003289ED /* PTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC7C517142D2515003289ED /* PTTestViewController.m */; };
 		DBC7C65F142D7480003289ED /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB005BAC142D0A950043E6BD /* AppDelegate.h */; };
 		DBC7C660142D7487003289ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAD142D0A950043E6BD /* AppDelegate.m */; };
-		DBC7C66C142D7777003289ED /* PilotTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB005BAF142D0A950043E6BD /* PilotTestApp.xcdatamodeld */; };
 		DBC7C66D142D7863003289ED /* GreenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB4142D15D900EC22F9 /* GreenObject.m */; };
 		DBC7C66E142D7863003289ED /* RedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBB0142D15D900EC22F9 /* RedObject.m */; };
 		DBC7C66F142D7863003289ED /* PTTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7FBAC142D15D900EC22F9 /* PTTestObject.m */; };
@@ -572,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB005BAA142D0A950043E6BD /* main.m in Sources */,
+				DB895D0D1464746600EDD59E /* PilotTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +593,6 @@
 				DBC7C65C142D746F003289ED /* RootViewController.m in Sources */,
 				DBC7C65E142D746F003289ED /* PTTestViewController.m in Sources */,
 				DBC7C660142D7487003289ED /* AppDelegate.m in Sources */,
-				DBC7C66C142D7777003289ED /* PilotTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +623,7 @@
 				DBC7C5DC142D6A86003289ED /* AppDelegate.m in Sources */,
 				DBC7C61F142D6D0B003289ED /* LeftViewController.m in Sources */,
 				DBC7C622142D6D0B003289ED /* RightViewController.m in Sources */,
+				DB895D0E1464746700EDD59E /* PilotTestApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
