@@ -30,7 +30,7 @@
 + (void)reset;
 
 /**
- *
+ Pushes the objects view controller onto the stack
  */
 + (void)showObject:(NSManagedObject *)object;
 
@@ -55,6 +55,12 @@
 + (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation;
 
 /**
+ Pushes the objects view controller onto the stack with the given animation transition
+ over the given duration.
+ */
++ (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration;
+
+/**
  *
  */
 + (void)showObjectAsModal:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation;
@@ -62,7 +68,7 @@
 /**
  *
  */
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration;
 
 /**
  *
@@ -70,8 +76,9 @@
 + (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation;
 
 /**
- *
+ Pushes the objects view controller onto the stack with the given animation transition
+ over the given duration, and performs the designated selector.
  */
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal;
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration asModal:(BOOL)asModal;
 
 @end

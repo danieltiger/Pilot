@@ -204,12 +204,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CFECF4142D31620065A487 /* libPilot.a in Frameworks */,
 				07CFECEA142D2F890065A487 /* CoreData.framework in Frameworks */,
 				07CFECF2142D30A40065A487 /* CoreFoundation.framework in Frameworks */,
 				DB0C474F142BE08700086D0F /* Foundation.framework in Frameworks */,
 				DB0C474C142BE08700086D0F /* SenTestingKit.framework in Frameworks */,
 				DB065740142C49C3002B2259 /* UIKit.framework in Frameworks */,
+				07CFECF4142D31620065A487 /* libPilot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +776,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = include/Pilot/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/Pilot;
@@ -800,7 +800,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = include/Pilot/Private;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/Pilot;

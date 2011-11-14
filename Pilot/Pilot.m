@@ -8,6 +8,7 @@
 
 #import "Pilot.h"
 
+#define PILOT_ANIMATION_DURATION 0.3
 
 @interface Pilot (Private)
 + (Class)viewControllerClassForObject:(NSManagedObject *)object;
@@ -25,10 +26,15 @@ static UITabBarController *rootTabBarController = nil;
 #pragma mark - Private Methods
 
 + (Class)viewControllerClassForObject:(NSManagedObject *)object {
+    
+    NSAssert(object, @"PILOT ERROR: nil object passed in!", object);
+    if (!object) return nil;
+    
     NSString *objectClassName = NSStringFromClass([object class]);
     NSString *viewControllerClassName = [NSString stringWithFormat:@"%@ViewController", objectClassName];
 
     NSAssert(NSClassFromString(viewControllerClassName), @"PILOT ERROR: Could not find %@", viewControllerClassName);
+    if (!viewControllerClassName) return nil;
         
     return NSClassFromString(viewControllerClassName);
 }
@@ -37,8 +43,20 @@ static UITabBarController *rootTabBarController = nil;
     return NSSelectorFromString(@"initWithObjectURI:");
 }
 
-+ (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation {
-    [[self currentNavigationController] pushViewController:viewController animated:YES];
++ (void)presentViewController:(id)viewController withAnimation:(UIViewAnimationTransition)animation andDuration:(CGFloat)duration {
+    
+    if (animation != UIViewAnimationOptionTransitionNone) {
+        [UIView transitionWithView:[self currentNavigationController].view 
+                          duration:duration
+                           options:animation
+                        animations:^{ 
+                            [[self currentNavigationController] pushViewController:viewController 
+                                                                          animated:NO];
+                        }
+                        completion:NULL];
+    } else {
+        [[self currentNavigationController] pushViewController:viewController animated:YES];        
+    }
 }
 
 + (void)presentViewControllerAsModal:(id)viewController withAnimation:(UIViewAnimationTransition)animation {
@@ -75,38 +93,42 @@ static UITabBarController *rootTabBarController = nil;
 }
 
 + (void)showObject:(NSManagedObject *)object {
-    [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:NO];
+    [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone duration:PILOT_ANIMATION_DURATION asModal:NO];
 }
 
 + (void)showObjectAsModal:(NSManagedObject *)object {
-    [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone asModal:YES];
+    [self showObject:object withSelector:[self defaultInitializer] animation:UIViewAnimationTransitionNone duration:PILOT_ANIMATION_DURATION asModal:YES];
 }
 
 + (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector {
-    [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone asModal:NO];
+    [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone duration:PILOT_ANIMATION_DURATION asModal:NO];
 }
 
 + (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector {
-    [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone asModal:YES];
+    [self showObject:object withSelector:selector animation:UIViewAnimationTransitionNone duration:PILOT_ANIMATION_DURATION asModal:YES];
 }
 
 + (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation {
-    [self showObject:object withSelector:[self defaultInitializer] animation:animation asModal:NO];
+    [self showObject:object withSelector:[self defaultInitializer] animation:animation duration:PILOT_ANIMATION_DURATION asModal:NO];
+}
+
++ (void)showObject:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration {
+    [self showObject:object withSelector:[self defaultInitializer] animation:animation duration:duration asModal:NO];
 }
 
 + (void)showObjectAsModal:(NSManagedObject *)object animation:(UIViewAnimationTransition)animation {
-    [self showObject:object withSelector:[self defaultInitializer] animation:animation asModal:YES];
+    [self showObject:object withSelector:[self defaultInitializer] animation:animation duration:PILOT_ANIMATION_DURATION asModal:YES];
 }
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
-    [self showObject:object withSelector:selector animation:animation asModal:NO];
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration {
+    [self showObject:object withSelector:selector animation:animation duration:duration asModal:NO];
 }
 
 + (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation {
-    [self showObject:object withSelector:selector animation:animation asModal:YES];
+    [self showObject:object withSelector:selector animation:animation duration:PILOT_ANIMATION_DURATION asModal:YES];
 }
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation asModal:(BOOL)asModal {
++ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animation:(UIViewAnimationTransition)animation duration:(CGFloat)duration asModal:(BOOL)asModal {
     Class viewControllerClass = [self viewControllerClassForObject:object];
     
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
@@ -120,7 +142,7 @@ static UITabBarController *rootTabBarController = nil;
     if (asModal) {
         [self presentViewControllerAsModal:viewController withAnimation:animation];
     } else {
-        [self presentViewController:viewController withAnimation:animation];
+        [self presentViewController:viewController withAnimation:animation andDuration:duration];
     }
 }
 
