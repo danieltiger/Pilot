@@ -106,7 +106,7 @@
 
 - (void)redButtonAction {
     RedObject *newRedObject = [RedObject objectWithUniqueMessage];
-    [Pilot showObject:newRedObject];
+    [Pilot showObject:newRedObject animation:UIViewAnimationOptionTransitionCurlDown duration:0.8];
 }
 
 - (void)greenButtonAction {
