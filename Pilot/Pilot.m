@@ -35,8 +35,8 @@ static UITabBarController *rootTabBarController = nil;
                                                   animated:animation];
 }
 
-+ (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animation {
-    [[self currentNavigationController] presentModalViewController:viewController animated:animation];
++ (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animated {
+    [[self currentNavigationController] presentModalViewController:viewController animated:animated];
 }
 
 + (void)popTopViewControllerAnimated:(BOOL)animated {

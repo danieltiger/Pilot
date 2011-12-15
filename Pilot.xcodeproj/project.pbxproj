@@ -151,7 +151,7 @@
 		DBC7C5D5142D6A86003289ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBC7C5D7142D6A86003289ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBC7C5D9142D6A86003289ED /* PilotTabbarTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilotTabbarTestApp-Prefix.pch"; sourceTree = "<group>"; };
-		DBC7C5DA142D6A86003289ED /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		DBC7C5DA142D6A86003289ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		DBC7C5DB142D6A86003289ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		DBC7C615142D6D0B003289ED /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Classes/first.png; sourceTree = "<group>"; };
 		DBC7C616142D6D0B003289ED /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Classes/first@2x.png"; sourceTree = "<group>"; };
