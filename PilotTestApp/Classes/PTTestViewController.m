@@ -17,11 +17,6 @@
 
 @synthesize objectMessage;
 
-- (void)dealloc {
-    [objectMessage release];
-    
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +55,7 @@
 //    [self.view addSubview:titleLabel];
         
     // Message
-    UILabel *objectMessageLabel = [[[UILabel alloc] init] autorelease];
+    UILabel *objectMessageLabel = [[UILabel alloc] init];
     objectMessageLabel.numberOfLines = 0;
     objectMessageLabel.text = self.objectMessage;
     

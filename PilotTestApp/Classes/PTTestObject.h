@@ -12,7 +12,7 @@
 
 @interface PTTestObject : NSManagedObject
 
-@property (nonatomic, retain) NSString * message;
+@property (nonatomic, strong) NSString * message;
 
 + (id)objectWithUniqueMessage;
 

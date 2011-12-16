@@ -139,7 +139,7 @@ static UITabBarController *rootTabBarController = nil;
     NSAssert([object isKindOfClass:[NSManagedObject class]], @"PILOT ERROR: Object %@ is not a sublcass of NSManagedObject", 
              NSStringFromClass([object class]));
     
-    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation] autorelease];
+    id viewController = [[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation];
     
     if (asModal) {
         [self presentViewControllerAsModal:viewController animated:animated];

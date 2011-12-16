@@ -12,17 +12,17 @@
     UINavigationController *navigationController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
 
 /**
  * The UINavigationControllers RootViewController
  */
-@property (nonatomic, readonly) UIViewController *rootViewController;
+@property (unsafe_unretained, nonatomic, readonly) UIViewController *rootViewController;
 
 /**
  * The apps navigation controller.
  */
-@property (nonatomic, readonly) UINavigationController *navigationController;
+@property (unsafe_unretained, nonatomic, readonly) UINavigationController *navigationController;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
