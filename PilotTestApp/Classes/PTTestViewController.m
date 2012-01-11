@@ -71,7 +71,7 @@
     
     // Red
     UIButton *redButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [redButton setTitle:@"Show Red" forState:UIControlStateNormal];
+    [redButton setTitle:@"Show Red w/o Animation" forState:UIControlStateNormal];
     [redButton addTarget:self action:@selector(redButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [redButton sizeToFit];
     [self.view addSubview:redButton];
@@ -90,10 +90,22 @@
     [blueButton sizeToFit];
     [self.view addSubview:blueButton];
     
+    // Pop
+    UIButton *popButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [popButton setTitle:@"Pop" forState:UIControlStateNormal];
+    [popButton addTarget:self action:@selector(popButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [popButton sizeToFit];
+    [self.view addSubview:popButton];
+    
+    // Pop Animated
+    UIButton *popAnimatedButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [popAnimatedButton setTitle:@"Pop Animated" forState:UIControlStateNormal];
+    [popAnimatedButton addTarget:self action:@selector(popAnimatedButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [popAnimatedButton sizeToFit];
+    [self.view addSubview:popAnimatedButton];
+    
     // This is just a convience function to layout the title and buttons
     [self layoutViews];
-
-    
 }
 
 - (void)viewDidUnload {
@@ -106,7 +118,7 @@
 
 - (void)redButtonAction {
     RedObject *newRedObject = [RedObject objectWithUniqueMessage];
-    [Pilot showObject:newRedObject animation:UIViewAnimationOptionTransitionCurlDown duration:0.8];
+    [Pilot showObject:newRedObject animated:NO];
 }
 
 - (void)greenButtonAction {
@@ -119,6 +131,14 @@
     [Pilot showObject:newBlueObject];
 }
 
+- (void)popButtonAction {
+    [Pilot popTopViewControllerAnimated:NO];
+}
+
+- (void)popAnimatedButtonAction {
+    [Pilot popTopViewControllerAnimated:YES];
+}
+
 #pragma - Layout
 
 - (void)layoutViews {
@@ -127,7 +147,7 @@
         
         if (i == 0) {
             v.frame = CGRectMake(round(self.view.frame.size.width / 2 - v.frame.size.width / 2), 
-                                 round(v.frame.size.height + 20), 
+                                 round(v.frame.size.height + 10), 
                                  v.frame.size.width, 
                                  v.frame.size.height);
         } else {
@@ -135,7 +155,7 @@
             UIView *v0 = [self.view.subviews objectAtIndex:(i - 1)];
             
             v.frame = CGRectMake(round(self.view.frame.size.width / 2 - v.frame.size.width / 2), 
-                                 round(v0.frame.origin.y + v0.frame.size.height + 20), 
+                                 round(v0.frame.origin.y + v0.frame.size.height + 10), 
                                  v.frame.size.width, 
                                  v.frame.size.height);
         }
