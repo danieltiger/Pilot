@@ -30,9 +30,9 @@ static UITabBarController *rootTabBarController = nil;
 
 #pragma mark - Navigation
 
-+ (void)pushViewController:(id)viewController animated:(BOOL)animation {
++ (void)pushViewController:(id)viewController animated:(BOOL)animated {
     [[self currentNavigationController] pushViewController:viewController 
-                                                  animated:animation];
+                                                  animated:animated];
 }
 
 + (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animated {
