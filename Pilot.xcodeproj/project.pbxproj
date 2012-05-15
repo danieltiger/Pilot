@@ -496,7 +496,7 @@
 		DB0C472F142BE04D00086D0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Pilot;
 			};
 			buildConfigurationList = DB0C4732142BE04D00086D0F /* Build configuration list for PBXProject "Pilot" */;
