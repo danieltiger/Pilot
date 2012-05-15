@@ -44,24 +44,27 @@ static UITabBarController *rootTabBarController = nil;
     [[self currentNavigationController] popViewControllerAnimated:animated];
 }
 
-// TODO: Custom animations
-//+ (void)pushViewController:(id)viewController 
-//       withCustomAnimation:(UIViewAnimationTransition)animation 
-//               andDuration:(CGFloat)duration {
-//    
-//    if (animation != UIViewAnimationOptionTransitionNone) {
-//        [UIView transitionWithView:[self currentNavigationController].view 
-//                          duration:duration
-//                           options:animation
-//                        animations:^{ 
-//                            [[self currentNavigationController] pushViewController:viewController 
-//                                                                          animated:NO];
-//                        }
-//                        completion:NULL];
-//    } else {
-//        [self pushViewController:viewController animated:NO];
-//    }
-//}
++ (void)popToRootViewControllerAnimated:(BOOL)animated {
+    [[self currentNavigationController] popToRootViewControllerAnimated:animated];
+}
+
++ (void)pushViewController:(id)viewController 
+  withCustomAnimationBlock:(void (^)())animationBlock 
+               andDuration:(CGFloat)duration {
+    
+    if (!animationBlock) {
+        [self pushViewController:viewController animated:NO];
+    }
+
+    [[self currentNavigationController] pushViewController:viewController 
+                                                  animated:NO];
+    
+    [UIView animateWithDuration:duration
+                     animations:animationBlock
+                     completion:^(BOOL finished) {
+                     }
+     ];
+}
 
 #pragma mark - 
 

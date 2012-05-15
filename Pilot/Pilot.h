@@ -25,12 +25,19 @@
 
 + (void)pushViewController:(id)viewController animated:(BOOL)animated;
 
++ (void)pushViewController:(id)viewController 
+  withCustomAnimationBlock:(void (^)())animationBlock 
+               andDuration:(CGFloat)duration;
+
 + (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animated;
 
 /**
  Pops the top view controller off the stack
  */
 + (void)popTopViewControllerAnimated:(BOOL)animated;
+
++ (void)popToRootViewControllerAnimated:(BOOL)animated;
+
 
 /**
  Returns the view controller class for the given NSManagedObject.  This follows
