@@ -86,15 +86,19 @@ To show a UIViewController as modal with support for `UIModalTransitionStyle`.
 ##Custom Animations
 
 Pilot now has support for custom animation transitions when pushing a view controller through block animations.  In this example the view controllers view will fade in over 0.3 seconds.
-
-	UIViewController *viewController = [[UIViewController alloc] init];
-	viewController.view.alpha = 0.0;
    
-   	[Pilot pushViewController:viewController withCustomAnimationBlock:^ {viewController.view.alpha = 1.0;} andDuration:0.3];
+    PilotAnimationBlock animationblock = ^(UIViewController *viewController) {
+        viewController.view.alpha = 0.0;
+        [UIView animateWithDuration:1.0 animations:^ {
+            viewController.view.alpha = 1.0;
+        }];
+    };
+    
+   	[Pilot pushViewController:viewController withAnimationBlock:animationBlock];
  
 ##Core Data
  
-Pilot has some super useful conventions for working with CoreData objects.  By using these conventions, building a view controller from an `NSManagedObject` subclass is really easy.
+Pilot has some super useful conventions for working with CoreData objects.  By using these conventions, building a view controller from an `NSManagedObject` subclass is really easy.  This section of the documentation is in progress.
  
 ***
 
