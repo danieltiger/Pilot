@@ -2,12 +2,8 @@
 
 ***
 
-***
-
 ##Introduction
 Pilot is designed to make managing the `UIViewController` stack of a `UINavigationController` backed app easy. 
-
-***
 
 ##Setup
 To setup Pilot with a single UINavigationController, use `setupiWithNavigationController:` in your App delegates `didFinishLaunchingWithOptions:` method.
@@ -50,16 +46,12 @@ Pilot also supports multiple `UINavigationControllers` through the use of a `UIT
     	return YES;
 	}
 
-***
-
 ##Pushing
 
 To push a new view controller onto the stack.
     
     UIViewController *viewController = [[UIViewController alloc] init];
     [Pilot pushViewController:viewController animated:YES];
-
-***
 
 ##Popping
 
@@ -71,8 +63,6 @@ To pop to the root view controller
 
     [Pilot popToRootViewControllerAnimated:YES];
 
-***
-
 ##Modals
 
 To show a UIViewController as modal with support for `UIModalTransitionStyle`.
@@ -80,8 +70,6 @@ To show a UIViewController as modal with support for `UIModalTransitionStyle`.
     UIViewController *viewController = [[UIViewController alloc] init];
     viewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [Pilot presentViewControllerAsModal:viewController animated:YES];
- 
-***
 
 ##Custom Animations
 
@@ -99,11 +87,8 @@ Pilot now has support for custom animation transitions when pushing a view contr
 ##Core Data
  
 Pilot has some super useful conventions for working with CoreData objects.  By using these conventions, building a view controller from an `NSManagedObject` subclass is really easy.  This section of the documentation is in progress.
- 
-***
 
-Contributing
--------------------------
+##Contributing
 
 Forks, patches and other feedback are always welcome. 
 
