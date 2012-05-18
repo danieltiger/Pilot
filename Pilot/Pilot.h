@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
+
 @interface Pilot : NSObject
 
 /**
@@ -23,13 +25,11 @@
 
 + (void)setupWithTabBarController:(UITabBarController *)tabBarController;
 
-+ (void)pushViewController:(id)viewController animated:(BOOL)animated;
++ (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
-+ (void)pushViewController:(id)viewController 
-  withCustomAnimationBlock:(void (^)())animationBlock 
-               andDuration:(CGFloat)duration;
++ (void)pushViewController:(UIViewController *)viewController withCustomAnimationBlock:(PilotAnimationBlock)animationBlock;
 
-+ (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animated;
++ (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated;
 
 /**
  Pops the top view controller off the stack
@@ -62,15 +62,29 @@
 + (void)reset;
 
 /**
+ Builds a UIViewController using Pilot naming conventions for the given object, 
+ and uses the initialization selector.
+ */
+
++ (UIViewController *)viewControllerForOject:(NSManagedObject *)object withSelector:(SEL)selector;
+
+/**
  Pushes the objects view controller onto the stack
  */
 + (void)showObject:(NSManagedObject *)object;
 
 + (void)showObject:(NSManagedObject *)object animated:(BOOL)animated;
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector;
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector;
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated;
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated;
+
+/**
+ Pushes the objects view controller onto the stack with custom animations
+ */
++ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock;
+
++ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector;
 
 /**
  Pushes the objects view controller onto the stack as a modal ViewController
@@ -79,13 +93,13 @@
 
 + (void)showObjectAsModal:(NSManagedObject *)object animated:(BOOL)animated;
 
-+ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector;
++ (void)showObjectAsModal:(NSManagedObject *)object withInitializationSelector:(SEL)selector;
 
-+ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated;
++ (void)showObjectAsModal:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated;
 
 /**
  All "show" actions filter down to this method
  */
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated asModal:(BOOL)asModal;
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated asModal:(BOOL)asModal;
 
 @end

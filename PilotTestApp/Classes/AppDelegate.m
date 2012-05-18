@@ -23,10 +23,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [self.window addSubview:self.navigationController.view];
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     
-    [Pilot setupWithNavigationController:self.navigationController];
+    [Pilot setupWithNavigationController:navigationController];
     
     return  YES;
 }
@@ -84,18 +87,6 @@
             abort();
         } 
     }
-}
-
-#pragma - Accessors
-
-- (UIViewController *)rootViewController {
-    return [[RootViewController alloc] init];
-}
-
-- (UINavigationController *)navigationController {
-    if (navigationController) return navigationController;
-    navigationController = [[UINavigationController alloc] initWithRootViewController:[self rootViewController]];
-    return navigationController;
 }
 
 #pragma mark - Core Data stack

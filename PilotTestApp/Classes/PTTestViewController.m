@@ -71,6 +71,12 @@
     [redButton sizeToFit];
     [self.view addSubview:redButton];
     
+    UIButton *redButton2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [redButton2 setTitle:@"Show Red w/ custom Animation" forState:UIControlStateNormal];
+    [redButton2 addTarget:self action:@selector(redButtonCustomAnimationAction) forControlEvents:UIControlEventTouchUpInside];
+    [redButton2 sizeToFit];
+    [self.view addSubview:redButton2];
+    
     // Green
     UIButton *greenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenButton setTitle:@"Show Green" forState:UIControlStateNormal];
@@ -114,6 +120,19 @@
 - (void)redButtonAction {
     RedObject *newRedObject = [RedObject objectWithUniqueMessage];
     [Pilot showObject:newRedObject animated:NO];
+}
+
+- (void)redButtonCustomAnimationAction {
+    RedObject *newRedObject = [RedObject objectWithUniqueMessage];
+    [Pilot showObject:newRedObject withCustomAnimationBlock: ^(UIViewController *viewController) {
+        
+        viewController.view.alpha = 0.0;
+        
+        [UIView animateWithDuration:1.0 animations:^ {
+            viewController.view.alpha = 1.0;
+        }];
+        
+    }];
 }
 
 - (void)greenButtonAction {
