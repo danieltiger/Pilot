@@ -6,22 +6,23 @@
 Pilot is designed to make managing the `UIViewController` stack of a `UINavigationController` backed app easy. 
 
 ##Setup
-To setup Pilot with a single UINavigationController, use `setupiWithNavigationController:` in your App delegates `didFinishLaunchingWithOptions:` method.
+To setup Pilot with a single UINavigationController, use `setupWithNavigationController:` in your App delegates `didFinishLaunchingWithOptions:` method.
 
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-	{
-    	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+```objective-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    	UIViewController *rootViewController = [[UIViewController alloc] init];
-    	UINavigationController *navigationController = [[UINavigationController alloc] 	initWithRootViewController:rootViewController];
+	UIViewController *rootViewController = [[UIViewController alloc] init];
+	UINavigationController *navigationController = [[UINavigationController alloc] 	initWithRootViewController:rootViewController];
     
-   	 	[self.window addSubview:navigationController.view];
-   	 	[self.window makeKeyAndVisible];
+	[self.window addSubview:navigationController.view];
+   	[self.window makeKeyAndVisible];
     
-    	[Pilot setupWithNavigationController:navigationController];
+    [Pilot setupWithNavigationController:navigationController];
     
-  	  return  YES;
-	}
+  	 return  YES;
+}
+```
 
 Pilot also supports multiple `UINavigationControllers` through the use of a `UITabBarController`.  In your App delegates `didFinishLaunchingWithOptions:` method, do the following.
 
