@@ -48,15 +48,14 @@ static UITabBarController *rootTabBarController = nil;
     [[self currentNavigationController] popToRootViewControllerAnimated:animated];
 }
 
-+ (void)pushViewController:(UIViewController *)viewController 
-  withCustomAnimationBlock:(PilotAnimationBlock)animationBlock {
++ (void)pushViewController:(UIViewController *)viewController withAnimationBlock:(PilotAnimationBlock)animationBlock {
     
     if (!animationBlock) {
-        [self pushViewController:viewController animated:NO];
+        [self pushViewController:viewController animated:YES];
+        return;
     }
 
-    [[self currentNavigationController] pushViewController:viewController 
-                                                  animated:NO];
+    [self pushViewController:viewController animated:NO];
     
     animationBlock(viewController);
 }
@@ -77,10 +76,6 @@ static UITabBarController *rootTabBarController = nil;
     return NSClassFromString(viewControllerClassName);
 }
 
-+ (SEL)defaultInitializer {
-    return NSSelectorFromString(@"initWithObjectURI:");
-}
-
 + (UINavigationController *)currentNavigationController {
     if (rootNavigationController) {
         return rootNavigationController;
@@ -95,7 +90,21 @@ static UITabBarController *rootTabBarController = nil;
     return nil;
 }
 
-#pragma mark - 
++ (UIViewController *)topViewController {
+    return [[self currentNavigationController] topViewController];
+}
+
++ (UIViewController *)rootViewController {
+    NSArray *viewControllers = [[self currentNavigationController] viewControllers];
+    if (viewControllers.count == 0) return nil;
+    return [viewControllers objectAtIndex:0];
+}
+
+#pragma mark - Building
+
++ (SEL)defaultInitializer {
+    return NSSelectorFromString(@"initWithObjectURI:");
+}
 
 + (UIViewController *)viewControllerForOject:(NSManagedObject *)object withSelector:(SEL)selector {
     Class viewControllerClass = [self viewControllerClassForObject:object];
@@ -158,16 +167,15 @@ static UITabBarController *rootTabBarController = nil;
 
 #pragma mark - Show Custom Animations
 
-+ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock {
-    [self showObject:object withCustomAnimationBlock:animationBlock andSelector:[self defaultInitializer]];
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock {
+    [self showObject:object withAnimationBlock:animationBlock andSelector:[self defaultInitializer]];
 }
 
-+ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector { 
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector { 
     
     UIViewController *viewController = [self viewControllerForOject:object withSelector:selector];
     
-    [self pushViewController:viewController 
-    withCustomAnimationBlock:animationBlock];
+    [self pushViewController:viewController withAnimationBlock:animationBlock];;
 }
 
 @end

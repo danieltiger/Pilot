@@ -105,6 +105,12 @@
     [popAnimatedButton sizeToFit];
     [self.view addSubview:popAnimatedButton];
     
+    UIButton *popCustomAnimatedButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [popCustomAnimatedButton setTitle:@"Pop w/ custom Animation" forState:UIControlStateNormal];
+    [popCustomAnimatedButton addTarget:self action:@selector(popCustomAnimatedButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [popCustomAnimatedButton sizeToFit];
+    [self.view addSubview:popCustomAnimatedButton];
+    
     // This is just a convience function to layout the title and buttons
     [self layoutViews];
 }
@@ -124,15 +130,17 @@
 
 - (void)redButtonCustomAnimationAction {
     RedObject *newRedObject = [RedObject objectWithUniqueMessage];
-    [Pilot showObject:newRedObject withCustomAnimationBlock: ^(UIViewController *viewController) {
-        
+    
+    PilotAnimationBlock animationblock = ^(UIViewController *viewController) {
         viewController.view.alpha = 0.0;
-        
+
         [UIView animateWithDuration:1.0 animations:^ {
             viewController.view.alpha = 1.0;
         }];
-        
-    }];
+    };
+
+    [Pilot showObject:newRedObject withAnimationBlock:animationblock];
+
 }
 
 - (void)greenButtonAction {
@@ -153,6 +161,18 @@
     [Pilot popTopViewControllerAnimated:YES];
 }
 
+- (void)popCustomAnimatedButtonAction {
+
+    UIViewController *viewController = [Pilot topViewController];
+    
+    [UIView animateWithDuration:1.0
+                     animations:^ {
+                         viewController.view.alpha = 0.0;
+                     } completion:^(BOOL complete) {
+                         [Pilot popTopViewControllerAnimated:NO];                     
+                     }];
+    }
+
 #pragma - Layout
 
 - (void)layoutViews {
@@ -161,7 +181,7 @@
         
         if (i == 0) {
             v.frame = CGRectMake(round(self.view.frame.size.width / 2 - v.frame.size.width / 2), 
-                                 round(v.frame.size.height + 10), 
+                                10, 
                                  v.frame.size.width, 
                                  v.frame.size.height);
         } else {

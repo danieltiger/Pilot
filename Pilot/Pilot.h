@@ -27,7 +27,7 @@ typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
 
 + (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
-+ (void)pushViewController:(UIViewController *)viewController withCustomAnimationBlock:(PilotAnimationBlock)animationBlock;
++ (void)pushViewController:(UIViewController *)viewController withAnimationBlock:(PilotAnimationBlock)setupBlock;
 
 + (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated;
 
@@ -57,6 +57,16 @@ typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
 + (UINavigationController *)currentNavigationController;
 
 /**
+ Returns the top view controller for the current navigation controller.
+ */
++ (UIViewController *)topViewController;
+
+/**
+ Returns the root view controller for the current navigation controller.
+ */
++ (UIViewController *)rootViewController;
+
+/**
  * Reset Pilot to a clean state.
  */
 + (void)reset;
@@ -82,9 +92,9 @@ typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
 /**
  Pushes the objects view controller onto the stack with custom animations
  */
-+ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock;
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock;
 
-+ (void)showObject:(NSManagedObject *)object withCustomAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector;
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector;
 
 /**
  Pushes the objects view controller onto the stack as a modal ViewController
