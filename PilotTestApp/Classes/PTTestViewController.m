@@ -17,11 +17,6 @@
 
 @synthesize objectMessage;
 
-- (void)dealloc {
-    [objectMessage release];
-    
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +55,7 @@
 //    [self.view addSubview:titleLabel];
         
     // Message
-    UILabel *objectMessageLabel = [[[UILabel alloc] init] autorelease];
+    UILabel *objectMessageLabel = [[UILabel alloc] init];
     objectMessageLabel.numberOfLines = 0;
     objectMessageLabel.text = self.objectMessage;
     
@@ -75,6 +70,12 @@
     [redButton addTarget:self action:@selector(redButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [redButton sizeToFit];
     [self.view addSubview:redButton];
+    
+    UIButton *redButton2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [redButton2 setTitle:@"Show Red w/ custom Animation" forState:UIControlStateNormal];
+    [redButton2 addTarget:self action:@selector(redButtonCustomAnimationAction) forControlEvents:UIControlEventTouchUpInside];
+    [redButton2 sizeToFit];
+    [self.view addSubview:redButton2];
     
     // Green
     UIButton *greenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -104,6 +105,12 @@
     [popAnimatedButton sizeToFit];
     [self.view addSubview:popAnimatedButton];
     
+    UIButton *popCustomAnimatedButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [popCustomAnimatedButton setTitle:@"Pop w/ custom Animation" forState:UIControlStateNormal];
+    [popCustomAnimatedButton addTarget:self action:@selector(popCustomAnimatedButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [popCustomAnimatedButton sizeToFit];
+    [self.view addSubview:popCustomAnimatedButton];
+    
     // This is just a convience function to layout the title and buttons
     [self layoutViews];
 }
@@ -119,6 +126,21 @@
 - (void)redButtonAction {
     RedObject *newRedObject = [RedObject objectWithUniqueMessage];
     [Pilot showObject:newRedObject animated:NO];
+}
+
+- (void)redButtonCustomAnimationAction {
+    RedObject *newRedObject = [RedObject objectWithUniqueMessage];
+    
+    PilotAnimationBlock animationblock = ^(UIViewController *viewController) {
+        viewController.view.alpha = 0.0;
+
+        [UIView animateWithDuration:1.0 animations:^ {
+            viewController.view.alpha = 1.0;
+        }];
+    };
+
+    [Pilot showObject:newRedObject withAnimationBlock:animationblock];
+
 }
 
 - (void)greenButtonAction {
@@ -139,6 +161,18 @@
     [Pilot popTopViewControllerAnimated:YES];
 }
 
+- (void)popCustomAnimatedButtonAction {
+
+    UIViewController *viewController = [Pilot topViewController];
+    
+    [UIView animateWithDuration:1.0
+                     animations:^ {
+                         viewController.view.alpha = 0.0;
+                     } completion:^(BOOL complete) {
+                         [Pilot popTopViewControllerAnimated:NO];                     
+                     }];
+    }
+
 #pragma - Layout
 
 - (void)layoutViews {
@@ -147,7 +181,7 @@
         
         if (i == 0) {
             v.frame = CGRectMake(round(self.view.frame.size.width / 2 - v.frame.size.width / 2), 
-                                 round(v.frame.size.height + 10), 
+                                10, 
                                  v.frame.size.width, 
                                  v.frame.size.height);
         } else {

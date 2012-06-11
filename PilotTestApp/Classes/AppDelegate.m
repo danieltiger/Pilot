@@ -18,25 +18,18 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-- (void)dealloc
-{    
-    [navigationController release];
-    [_window release];
-
-    [__managedObjectContext release];
-    [__managedObjectModel release];
-    [__persistentStoreCoordinator release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [self.window addSubview:self.navigationController.view];
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     
-    [Pilot setupWithNavigationController:self.navigationController];
+    [Pilot setupWithNavigationController:navigationController];
     
     return  YES;
 }
@@ -94,18 +87,6 @@
             abort();
         } 
     }
-}
-
-#pragma - Accessors
-
-- (UIViewController *)rootViewController {
-    return [[[RootViewController alloc] init] autorelease];
-}
-
-- (UINavigationController *)navigationController {
-    if (navigationController) return [[navigationController retain] autorelease];
-    navigationController = [[UINavigationController alloc] initWithRootViewController:[self rootViewController]];
-    return [[navigationController retain] autorelease];
 }
 
 #pragma mark - Core Data stack

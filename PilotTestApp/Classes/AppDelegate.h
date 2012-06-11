@@ -8,21 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    UINavigationController *navigationController;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {}
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
-/**
- * The UINavigationControllers RootViewController
- */
-@property (nonatomic, readonly) UIViewController *rootViewController;
-
-/**
- * The apps navigation controller.
- */
-@property (nonatomic, readonly) UINavigationController *navigationController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

@@ -10,6 +10,7 @@
 
 static UINavigationController *rootNavigationController = nil;
 static UITabBarController *rootTabBarController = nil;
+static NSMutableArray *modalNavigationControllers = nil;
 
 @implementation Pilot
 
@@ -26,41 +27,76 @@ static UITabBarController *rootTabBarController = nil;
 + (void)reset {
     rootNavigationController = nil;
     rootTabBarController = nil;
+    [modalNavigationControllers removeAllObjects];
+    modalNavigationControllers = nil;
+}
+
++ (void)addModalNavigationController:(UINavigationController *)navController {
+
+    if (!modalNavigationControllers) {
+        modalNavigationControllers = [[NSMutableArray alloc] init];
+    }
+    
+    [modalNavigationControllers addObject:navController];
 }
 
 #pragma mark - Navigation
 
-+ (void)pushViewController:(id)viewController animated:(BOOL)animation {
++ (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [[self currentNavigationController] pushViewController:viewController 
-                                                  animated:animation];
+                                                  animated:animated];
 }
 
-+ (void)presentViewControllerAsModal:(id)viewController animated:(BOOL)animated {
-    [[self currentNavigationController] presentModalViewController:viewController animated:animated];
++ (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated {
+    [self presentViewControllerAsModal:viewController animated:animated withNewNavigationController:NO];
+}
+
++ (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated withNewNavigationController:(BOOL)addNavigationController {
+        
+    if (addNavigationController) {
+        
+        UINavigationController *cachedController = [self currentNavigationController];
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [self addModalNavigationController:navController];
+        
+        [cachedController presentModalViewController:navController 
+                                            animated:animated];
+    } else {
+        [[self currentNavigationController] presentModalViewController:viewController 
+                                                              animated:animated];
+    }
 }
 
 + (void)popTopViewControllerAnimated:(BOOL)animated {
+
+    if ([self topViewControllerIsModalNavigationControllerRoot]) {
+        [modalNavigationControllers removeLastObject];
+    }
+    
     [[self currentNavigationController] popViewControllerAnimated:animated];
 }
 
-// TODO: Custom animations
-//+ (void)pushViewController:(id)viewController 
-//       withCustomAnimation:(UIViewAnimationTransition)animation 
-//               andDuration:(CGFloat)duration {
-//    
-//    if (animation != UIViewAnimationOptionTransitionNone) {
-//        [UIView transitionWithView:[self currentNavigationController].view 
-//                          duration:duration
-//                           options:animation
-//                        animations:^{ 
-//                            [[self currentNavigationController] pushViewController:viewController 
-//                                                                          animated:NO];
-//                        }
-//                        completion:NULL];
-//    } else {
-//        [self pushViewController:viewController animated:NO];
-//    }
-//}
++ (void)popToModalRootViewControllerAnimated:(BOOL)animated {
+    [[self currentNavigationController] popToRootViewControllerAnimated:animated];
+}
+
++ (void)popToRootViewControllerAnimated:(BOOL)animated {
+    [modalNavigationControllers removeAllObjects];
+    [[self currentNavigationController] popToRootViewControllerAnimated:animated];
+}
+
++ (void)pushViewController:(UIViewController *)viewController withAnimationBlock:(PilotAnimationBlock)animationBlock {
+    
+    if (!animationBlock) {
+        [self pushViewController:viewController animated:YES];
+        return;
+    }
+
+    [self pushViewController:viewController animated:NO];
+    
+    animationBlock(viewController);
+}
 
 #pragma mark - 
 
@@ -78,11 +114,14 @@ static UITabBarController *rootTabBarController = nil;
     return NSClassFromString(viewControllerClassName);
 }
 
-+ (SEL)defaultInitializer {
-    return NSSelectorFromString(@"initWithObjectURI:");
-}
-
 + (UINavigationController *)currentNavigationController {
+    
+    // Check for modal navigation controllers first
+    if (modalNavigationControllers.count > 0) {
+        return [modalNavigationControllers lastObject];
+    }
+    
+    // Either setup with root navigation controller, or root tab bar controller
     if (rootNavigationController) {
         return rootNavigationController;
     } else {
@@ -96,41 +135,52 @@ static UITabBarController *rootTabBarController = nil;
     return nil;
 }
 
-#pragma mark - Show
-
-+ (void)showObject:(NSManagedObject *)object {
-    [self showObject:object withSelector:[self defaultInitializer] animated:YES asModal:NO];
++ (BOOL)currentNavigationControllerIsModal {
+    
+    UINavigationController *modalNavigationController = [modalNavigationControllers lastObject];
+    
+    if (modalNavigationController) {
+        if ([modalNavigationController isEqual:[self currentNavigationController]]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector {
-    [self showObject:object withSelector:selector animated:YES asModal:NO];
++ (BOOL)topViewControllerIsModalNavigationControllerRoot {
+    UINavigationController *modalNavigationController = [modalNavigationControllers lastObject];
+
+    if (modalNavigationController) {
+        
+        UIViewController *topViewController = [self topViewController];
+        UIViewController *rootViewController = [modalNavigationController.viewControllers objectAtIndex:0];
+        
+        if ([topViewController isEqual:rootViewController]) {
+            return YES;
+        }
+    }
+
+    return NO;
 }
 
-+ (void)showObject:(NSManagedObject *)object animated:(BOOL)animated {
-    [self showObject:object withSelector:[self defaultInitializer] animated:animated asModal:NO];
++ (UIViewController *)topViewController {
+    return [[self currentNavigationController] topViewController];
 }
 
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated {
-    [self showObject:object withSelector:selector animated:animated asModal:NO];
++ (UIViewController *)rootViewController {
+    NSArray *viewControllers = [[self currentNavigationController] viewControllers];
+    if (viewControllers.count == 0) return nil;
+    return [viewControllers objectAtIndex:0];
 }
 
-+ (void)showObjectAsModal:(NSManagedObject *)object {    
-    [self showObject:object withSelector:[self defaultInitializer] animated:YES asModal:YES];
+#pragma mark - Building
+
++ (SEL)defaultInitializer {
+    return NSSelectorFromString(@"initWithObjectURI:");
 }
 
-+ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector {
-    [self showObject:object withSelector:selector animated:YES asModal:YES];
-}
-
-+ (void)showObjectAsModal:(NSManagedObject *)object animated:(BOOL)animated {
-    [self showObject:object withSelector:[self defaultInitializer] animated:animated asModal:YES];
-}
-
-+ (void)showObjectAsModal:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated {
-    [self showObject:object withSelector:selector animated:animated asModal:YES];
-}
-
-+ (void)showObject:(NSManagedObject *)object withSelector:(SEL)selector animated:(BOOL)animated asModal:(BOOL)asModal {
++ (UIViewController *)viewControllerForOject:(NSManagedObject *)object withSelector:(SEL)selector {
     Class viewControllerClass = [self viewControllerClassForObject:object];
     
     NSAssert([viewControllerClass instancesRespondToSelector:selector], @"PILOT ERROR: Could not find selector %@ for %@ViewController", 
@@ -139,13 +189,67 @@ static UITabBarController *rootTabBarController = nil;
     NSAssert([object isKindOfClass:[NSManagedObject class]], @"PILOT ERROR: Object %@ is not a sublcass of NSManagedObject", 
              NSStringFromClass([object class]));
     
-    id viewController = [[[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation] autorelease];
+    UIViewController *viewController = (UIViewController *)[[viewControllerClass alloc] performSelector:selector withObject:object.objectID.URIRepresentation];
+
+    return viewController;
+}
+
+#pragma mark - Show
+
++ (void)showObject:(NSManagedObject *)object {
+    [self showObject:object withInitializationSelector:[self defaultInitializer] animated:YES asModal:NO];
+}
+
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector {
+    [self showObject:object withInitializationSelector:selector animated:YES asModal:NO];
+}
+
++ (void)showObject:(NSManagedObject *)object animated:(BOOL)animated {
+    [self showObject:object withInitializationSelector:[self defaultInitializer] animated:animated asModal:NO];
+}
+
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated {
+    [self showObject:object withInitializationSelector:selector animated:animated asModal:NO];
+}
+
++ (void)showObjectAsModal:(NSManagedObject *)object {    
+    [self showObject:object withInitializationSelector:[self defaultInitializer] animated:YES asModal:YES];
+}
+
++ (void)showObjectAsModal:(NSManagedObject *)object withInitializationSelector:(SEL)selector {
+    [self showObject:object withInitializationSelector:selector animated:YES asModal:YES];
+}
+
++ (void)showObjectAsModal:(NSManagedObject *)object animated:(BOOL)animated {
+    [self showObject:object withInitializationSelector:[self defaultInitializer] animated:animated asModal:YES];
+}
+
++ (void)showObjectAsModal:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated {
+    [self showObject:object withInitializationSelector:selector animated:animated asModal:YES];
+}
+
++ (void)showObject:(NSManagedObject *)object withInitializationSelector:(SEL)selector animated:(BOOL)animated asModal:(BOOL)asModal {
+    
+    UIViewController *viewController = [self viewControllerForOject:object withSelector:selector];
     
     if (asModal) {
         [self presentViewControllerAsModal:viewController animated:animated];
     } else {
         [self pushViewController:viewController animated:animated];
     }
+}
+
+#pragma mark - Show Custom Animations
+
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock {
+    [self showObject:object withAnimationBlock:animationBlock andSelector:[self defaultInitializer]];
+}
+
++ (void)showObject:(NSManagedObject *)object withAnimationBlock:(PilotAnimationBlock)animationBlock andSelector:(SEL)selector { 
+    
+    UIViewController *viewController = [self viewControllerForOject:object withSelector:selector];
+    
+    [self pushViewController:viewController withAnimationBlock:animationBlock];;
 }
 
 @end

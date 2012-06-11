@@ -19,7 +19,6 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize tabBarController = _tabBarController;
 
 - (void)dealloc
 {
@@ -40,17 +39,15 @@
     UINavigationController *navController2 = 
     [[UINavigationController alloc] initWithRootViewController:[[[RightViewController alloc] init] autorelease]];
     
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, nil];
+    UITabBarController *tabBarController = [[[UITabBarController alloc] init] autorelease];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, nil];
     
     // SETUP PILOT
-    [Pilot setupWithTabBarController:self.tabBarController];
+    [Pilot setupWithTabBarController:tabBarController];
     
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
-
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

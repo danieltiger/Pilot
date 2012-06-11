@@ -496,7 +496,7 @@
 		DB0C472F142BE04D00086D0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Pilot;
 			};
 			buildConfigurationList = DB0C4732142BE04D00086D0F /* Build configuration list for PBXProject "Pilot" */;
@@ -759,6 +759,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/Pilot.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -790,6 +791,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/Pilot.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
