@@ -10,6 +10,7 @@
 
 static UINavigationController *rootNavigationController = nil;
 static UITabBarController *rootTabBarController = nil;
+static NSMutableArray *modalNavigationControllers = nil;
 
 @implementation Pilot
 
@@ -26,6 +27,17 @@ static UITabBarController *rootTabBarController = nil;
 + (void)reset {
     rootNavigationController = nil;
     rootTabBarController = nil;
+    [modalNavigationControllers removeAllObjects];
+    modalNavigationControllers = nil;
+}
+
++ (void)addModalNavigationController:(UINavigationController *)navController {
+
+    if (!modalNavigationControllers) {
+        modalNavigationControllers = [[NSMutableArray alloc] init];
+    }
+    
+    [modalNavigationControllers addObject:navController];
 }
 
 #pragma mark - Navigation
@@ -36,15 +48,41 @@ static UITabBarController *rootTabBarController = nil;
 }
 
 + (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated {
-    [[self currentNavigationController] presentModalViewController:viewController 
-                                                          animated:animated];
+    [self presentViewControllerAsModal:viewController animated:animated withNewNavigationController:NO];
+}
+
++ (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated withNewNavigationController:(BOOL)addNavigationController {
+        
+    if (addNavigationController) {
+        
+        UINavigationController *cachedController = [self currentNavigationController];
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [self addModalNavigationController:navController];
+        
+        [cachedController presentModalViewController:navController 
+                                            animated:animated];
+    } else {
+        [[self currentNavigationController] presentModalViewController:viewController 
+                                                              animated:animated];
+    }
 }
 
 + (void)popTopViewControllerAnimated:(BOOL)animated {
+
+    if ([self topViewControllerIsModalNavigationControllerRoot]) {
+        [modalNavigationControllers removeLastObject];
+    }
+    
     [[self currentNavigationController] popViewControllerAnimated:animated];
 }
 
++ (void)popToModalRootViewControllerAnimated:(BOOL)animated {
+    [[self currentNavigationController] popToRootViewControllerAnimated:animated];
+}
+
 + (void)popToRootViewControllerAnimated:(BOOL)animated {
+    [modalNavigationControllers removeAllObjects];
     [[self currentNavigationController] popToRootViewControllerAnimated:animated];
 }
 
@@ -77,6 +115,13 @@ static UITabBarController *rootTabBarController = nil;
 }
 
 + (UINavigationController *)currentNavigationController {
+    
+    // Check for modal navigation controllers first
+    if (modalNavigationControllers.count > 0) {
+        return [modalNavigationControllers lastObject];
+    }
+    
+    // Either setup with root navigation controller, or root tab bar controller
     if (rootNavigationController) {
         return rootNavigationController;
     } else {
@@ -88,6 +133,35 @@ static UITabBarController *rootTabBarController = nil;
     }
     
     return nil;
+}
+
++ (BOOL)currentNavigationControllerIsModal {
+    
+    UINavigationController *modalNavigationController = [modalNavigationControllers lastObject];
+    
+    if (modalNavigationController) {
+        if ([modalNavigationController isEqual:[self currentNavigationController]]) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)topViewControllerIsModalNavigationControllerRoot {
+    UINavigationController *modalNavigationController = [modalNavigationControllers lastObject];
+
+    if (modalNavigationController) {
+        
+        UIViewController *topViewController = [self topViewController];
+        UIViewController *rootViewController = [modalNavigationController.viewControllers objectAtIndex:0];
+        
+        if ([topViewController isEqual:rootViewController]) {
+            return YES;
+        }
+    }
+
+    return NO;
 }
 
 + (UIViewController *)topViewController {

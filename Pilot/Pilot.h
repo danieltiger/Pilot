@@ -31,13 +31,23 @@ typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
 
 + (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated;
 
++ (void)presentViewControllerAsModal:(UIViewController *)viewController animated:(BOOL)animated withNewNavigationController:(BOOL)addNavigationController;
+
 /**
  Pops the top view controller off the stack
  */
 + (void)popTopViewControllerAnimated:(BOOL)animated;
 
-+ (void)popToRootViewControllerAnimated:(BOOL)animated;
+/**
+ Safely pops to the root view controller.  If there is a modal navigation controller
+ stack, it will pop to that.
+ */
++ (void)popToModalRootViewControllerAnimated:(BOOL)animated;
 
+/**
+ Pops to the root view controller of the root navigation controller.
+ */
++ (void)popToRootViewControllerAnimated:(BOOL)animated;
 
 /**
  Returns the view controller class for the given NSManagedObject.  This follows
@@ -55,6 +65,18 @@ typedef void (^PilotAnimationBlock)(UIViewController *navigationController);
  return the current selected view controller
  */
 + (UINavigationController *)currentNavigationController;
+
+/**
+ Test to determine if current navigation controller is part of a modal navigation
+ stack on top of root navigation controller
+ */
++ (BOOL)currentNavigationControllerIsModal;
+
+/**
+ Test to determine if the top view controller is the root view controller of a
+ modal navigation stack.
+ */
++ (BOOL)topViewControllerIsModalNavigationControllerRoot;
 
 /**
  Returns the top view controller for the current navigation controller.
